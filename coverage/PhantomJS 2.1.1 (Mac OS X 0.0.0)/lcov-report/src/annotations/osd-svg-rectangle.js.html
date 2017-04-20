@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/annotations/osd-svg-rectangle.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/annotations/osd-svg-rectangle.js</span></h1>
+    <h2>
+        Statements: <span class="metric">84.96% <small>(192 / 226)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">78.68% <small>(107 / 136)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">94.12% <small>(16 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">84.96% <small>(192 / 226)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/annotations/</a> &#187; osd-svg-rectangle.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+  $.Rectangle = function(options) {
+    jQuery.extend(this, {
+      name: 'Rectangle',
+      logoClass: 'check_box_outline_blank',
+      idPrefix: 'rectangle_',
+      tooltip: 'rectangleTooltip'
+    }, options);
+    this.init();
+  };
+&nbsp;
+  $.Rectangle.prototype = {
+    init: function() {
+      this.SEGMENT_POINTS_COUNT = 9;
+    },
+&nbsp;
+    createShape: function(initialPoint, overlay) {
+      overlay.mode = 'create';
+      var segments = this._createSegments(initialPoint, overlay);
+      var shape = new overlay.paperScope.Path({
+        segments: segments,
+        fullySelected: true,
+        name: overlay.getName(this)
+      });
+      shape.dashArray = overlay.dashArray;
+      shape.data.strokeWidth = overlay.strokeWidth;
+      shape.strokeWidth = shape.data.strokeWidth / overlay.paperScope.view.zoom;
+      shape.strokeColor = overlay.strokeColor;
+      shape.fillColor = overlay.fillColor;
+      shape.fillColor.alpha = overlay.fillColorAlpha;
+      shape.closed = true;
+      shape.data.rotation = 0;
+      overlay.segment = shape.segments[5];
+      this.updateSelection(true, shape, overlay);
+      return shape;
+    },
+&nbsp;
+    _createSegments:function(initialPoint, overlay){
+      var segments = [];
+      // point indexes
+      // 0    1&amp;2    3
+      //   ┌ ─ ─ ─ ┐
+      // 8 │       │ 4
+      //   └ ─ ─ ─ ┘
+      // 7     6     5(initial point)
+      // points 1 &amp; 2 are workaround used to draw rotation handle
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 2, initialPoint.y - 2));
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 1, initialPoint.y - 2));
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 1, initialPoint.y - 2));
+      segments.push(new overlay.paperScope.Point(initialPoint.x, initialPoint.y - 2));
+      segments.push(new overlay.paperScope.Point(initialPoint.x, initialPoint.y - 1));
+      segments.push(new overlay.paperScope.Point(initialPoint.x, initialPoint.y));
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 1, initialPoint.y));
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 2, initialPoint.y));
+      segments.push(new overlay.paperScope.Point(initialPoint.x - 2, initialPoint.y - 1));
+&nbsp;
+      return segments;
+    },
+&nbsp;
+    updateSelection: function (selected, item, overlay) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (item._name.toString().indexOf(this.idPrefix) != -1) {
+&nbsp;
+        if(item._name.toString().indexOf(this.partOfPrefix)!=-1){
+          return;
+        }
+&nbsp;
+        item.selected = selected;
+        if (selected) {
+&nbsp;
+          //item.segments[1].handleOut = new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom);
+         // item.segments[1].handleOut = item.segments[1].handleOut.rotate(item.data.rotation, item.segments[1]);
+&nbsp;
+          if (!item.data.deleteIcon) {
+&nbsp;
+            item.data.deleteIcon = new overlay.annotationUtils.DeleteActionIcon(overlay.paperScope, {
+              name: item.name + this.partOfPrefix + 'delete',
+              fillColor: item.selectedColor
+            });
+&nbsp;
+            item.data.deleteIcon.addData('pivot',item.segments[6].point);
+            item.data.deleteIcon.addData('type', 'deleteIcon');
+            item.data.deleteIcon.addData('self', item.data.deleteIcon);
+            item.data.deleteIcon.addData('parent', item);
+&nbsp;
+            item.data.deleteIcon.setPosition(item.data.deleteIcon.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.rotation)));
+&nbsp;
+            item.data.deleteIcon.setOnMouseDownListener(overlay);
+&nbsp;
+          }
+&nbsp;
+          if (!item.data.rotationIcon) {
+&nbsp;
+            item.data.rotationIcon = new overlay.annotationUtils.RotationIcon(overlay.paperScope, {
+              name: item.name + this.partOfPrefix + 'rotation',
+              fillColor: item.selectedColor
+            });
+&nbsp;
+            item.data.rotationIcon.addData('pivot',item.segments[1].point);
+            item.data.rotationIcon.addData('type', 'rotationIcon');
+            item.data.rotationIcon.addData('self', item.data.rotationIcon);
+            item.data.rotationIcon.addData('parent', item);
+&nbsp;
+            item.data.rotationIcon.setPosition(item.data.rotationIcon.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.rotation)));
+&nbsp;
+            item.data.rotationIcon.setOnMouseDownListener(overlay);
+&nbsp;
+          }
+&nbsp;
+          if (!item.data.group) {
+            item.data.group = new overlay.annotationUtils.Group(overlay.paperScope,[item,item.data.deleteIcon.getItem(),item.data.deleteIcon.getMask().getItem(),item.data.rotationIcon.getItem(),item.data.rotationIcon.getMask().getItem()]);
+          }
+&nbsp;
+          var point = item.segments[1].point.clone();
+          point = point.add(item.segments[1].handleOut);
+&nbsp;
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (item.contains(point)) {
+            item.segments[1].handleOut = item.segments[1].handleOut.rotate(180, item.segments[1]);
+          }
+&nbsp;
+          <span class="missing-if-branch" title="if path not taken" >I</span>if(item.contains(item.data.deleteIcon.getItem().position)){
+<span class="cstat-no" title="statement not covered" >            item.data.deleteIcon.setPosition(item.data.deleteIcon.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.rotation)));</span>
+<span class="cstat-no" title="statement not covered" >            item.data.deleteIcon.rotate(180,item.data.deleteIcon.getData('pivot'));</span>
+<span class="cstat-no" title="statement not covered" >            item.data.deleteIcon.rotate(180);</span>
+          }
+&nbsp;
+          <span class="missing-if-branch" title="if path not taken" >I</span>if(item.contains(item.data.rotationIcon.getItem().position)){
+<span class="cstat-no" title="statement not covered" >            item.data.rotationIcon.setPosition(item.data.rotationIcon.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.rotation)));</span>
+<span class="cstat-no" title="statement not covered" >            item.data.rotationIcon.rotate(180,item.data.rotationIcon.getData('pivot'));</span>
+<span class="cstat-no" title="statement not covered" >            item.data.rotationIcon.rotate(180);</span>
+          }
+&nbsp;
+          item.segments[1].handleOut.selected = false;
+        } else {
+&nbsp;
+          if(item.data.group){
+            item.data.group.remove();
+            item.data.group = null;
+            overlay.paperScope.project.activeLayer.addChild(item);
+          }
+&nbsp;
+          if(item.data.deleteIcon){
+            item.data.deleteIcon.remove();
+            item.data.deleteIcon = null;
+          }
+&nbsp;
+          if(item.data.rotationIcon){
+            item.data.rotationIcon.remove();
+            item.data.rotationIcon = null;
+          }
+          item.segments[1].handleOut = new overlay.paperScope.Point(0, 0);
+        }
+      }
+    },
+&nbsp;
+    onHover:function(activate,shape,hoverWidth,hoverColor){
+      shape.strokeWidth = hoverWidth;
+&nbsp;
+      // shape needs to have hovered styles
+      if(activate &amp;&amp; !shape.data.hovered){
+        shape.data.nonHoverStrokeColor = shape.strokeColor.clone();
+        shape.data.hovered = true;
+        shape.strokeColor = hoverColor;
+      }
+      // shape is not longer hovered
+      if(!activate &amp;&amp; shape.data.hovered){
+        shape.strokeColor = shape.data.nonHoverStrokeColor.clone();
+        delete shape.data.nonHoverStrokeColorColor;
+        delete shape.data.hovered;
+      }
+    },
+&nbsp;
+    // Old rectangle shapes does not have rotation handle point
+    // add it manually for old shapes
+    adaptSegments:function(shape,overlay){
+      var handleSegment = shape.segments[1].clone();
+      shape.segments.splice(1,0,handleSegment);
+    },
+&nbsp;
+    onMouseUp: function(event, overlay) {
+      if (overlay.mode === 'create' &amp;&amp; overlay.path) {
+        overlay.onDrawFinish();
+      } else <span class="missing-if-branch" title="if path not taken" >I</span>if (overlay.mode === 'translate' || overlay.mode === 'deform' &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >overlay.path)</span> {
+<span class="cstat-no" title="statement not covered" >        overlay.onEditFinish();</span>
+      }
+    },
+&nbsp;
+    translate: function(event, overlay) {
+      for (var i = 0; i &lt; overlay.path.segments.length; i++) {
+        overlay.path.segments[i].point.x += event.delta.x;
+        overlay.path.segments[i].point.y += event.delta.y;
+      }
+      overlay.path.data.rotationIcon.translateByXY(event.delta.x,event.delta.y);
+      overlay.path.data.deleteIcon.translateByXY(event.delta.x,event.delta.y);
+    },
+&nbsp;
+    rotate:function(event,overlay){
+      var center = overlay.path.position;
+      var rotation = Math.atan2(event.point.y - center.y + event.delta.y, event.point.x - center.x + event.delta.x) - Math.atan2(event.point.y - center.y, event.point.x - center.x);
+      rotation = rotation * (180 / Math.PI);
+&nbsp;
+      overlay.path.data.group.rotate(rotation,overlay.path.position);
+&nbsp;
+      overlay.path.data.deleteIcon.rotate(-rotation);
+      overlay.path.data.rotationIcon.rotate(-rotation);
+      overlay.path.data.rotation += rotation;
+    },
+&nbsp;
+    onMouseDrag: function (event, overlay) {
+      if (overlay.mode == 'translate') {
+        this.translate(event, overlay);
+        return;
+      }
+&nbsp;
+      if (overlay.mode === 'rotate') {
+        this.rotate(event, overlay);
+        return;
+      }
+&nbsp;
+      if (overlay.mode == 'create' || overlay.mode == 'deform') {
+        var idx = -1;
+        for (var l = 0; l &lt; overlay.path.segments.length; l++) {
+          if (overlay.path.segments[l] == overlay.segment) {
+            idx = l;
+            break;
+          }
+        }
+&nbsp;
+        var translation = new overlay.paperScope.Point(event.delta.x, event.delta.y);
+        var rot = overlay.path.data.rotation;
+        translation = translation.rotate(-rot);
+        var translationX = new overlay.paperScope.Point(translation.x, 0);
+        translationX = translationX.rotate(rot);
+        var translationY = new overlay.paperScope.Point(0, translation.y);
+        translationY = translationY.rotate(rot);
+        var moveTopSize = idx === 0 || idx === 1 || idx === 2 || idx === 3;
+        var moveBottomSize = idx === 5 || idx === 6 || idx === 7;
+        var moveRightSize = idx === 3 || idx === 4 || idx === 5;
+        var moveLeftSize = idx === 0 || idx === 7 || idx === 8;
+        if (moveTopSize) {
+          overlay.path.data.rotationIcon.translateByPoint(translationY);
+          overlay.path.segments[0].point = overlay.path.segments[0].point.add(translationY);
+          overlay.path.segments[1].point = overlay.path.segments[1].point.add(translationY);
+          overlay.path.segments[2].point = overlay.path.segments[2].point.add(translationY);
+          overlay.path.segments[3].point = overlay.path.segments[3].point.add(translationY);
+        }
+        if (moveBottomSize) {
+          overlay.path.data.deleteIcon.translateByPoint(translationY);
+&nbsp;
+          overlay.path.segments[5].point = overlay.path.segments[5].point.add(translationY);
+          overlay.path.segments[6].point = overlay.path.segments[6].point.add(translationY);
+          overlay.path.segments[7].point = overlay.path.segments[7].point.add(translationY);
+        }
+        if (moveTopSize || moveBottomSize) {
+          translationY = translationY.multiply(0.5);
+          overlay.path.segments[4].point = overlay.path.segments[4].point.add(translationY);
+          overlay.path.segments[8].point = overlay.path.segments[8].point.add(translationY);
+        }
+        if (moveRightSize) {
+          overlay.path.segments[3].point = overlay.path.segments[3].point.add(translationX);
+          overlay.path.segments[4].point = overlay.path.segments[4].point.add(translationX);
+          overlay.path.segments[5].point = overlay.path.segments[5].point.add(translationX);
+        }
+        if (moveLeftSize) {
+          overlay.path.segments[0].point = overlay.path.segments[0].point.add(translationX);
+          overlay.path.segments[7].point = overlay.path.segments[7].point.add(translationX);
+          overlay.path.segments[8].point = overlay.path.segments[8].point.add(translationX);
+        }
+        if (moveRightSize || moveLeftSize) {
+          translationX = translationX.multiply(0.5);
+          overlay.path.data.rotationIcon.translateByPoint(translationX);
+          overlay.path.data.deleteIcon.translateByPoint(translationX);
+&nbsp;
+          overlay.path.segments[1].point = overlay.path.segments[1].point.add(translationX);
+          overlay.path.segments[2].point = overlay.path.segments[2].point.add(translationX);
+          overlay.path.segments[6].point = overlay.path.segments[6].point.add(translationX);
+        }
+        var point = overlay.path.segments[1].point.clone();
+        point = point.add(overlay.path.segments[1].handleOut);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (overlay.path.contains(point)) { // TODO should delete this
+          overlay.path.segments[1].handleOut = overlay.path.segments[1].handleOut.rotate(180, overlay.path.segments[1]);
+        }
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (overlay.path.contains(overlay.path.data.deleteIcon.getItem().position)) {
+<span class="cstat-no" title="statement not covered" >          overlay.path.data.deleteIcon.rotate(180, overlay.path.data.deleteIcon.getData('pivot'));</span>
+<span class="cstat-no" title="statement not covered" >          overlay.path.data.deleteIcon.rotate(180);</span>
+        }
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (overlay.path.contains(overlay.path.data.rotationIcon.getItem().position)) {
+<span class="cstat-no" title="statement not covered" >          overlay.path.data.rotationIcon.rotate(180, overlay.path.data.rotationIcon.getData('pivot'));</span>
+<span class="cstat-no" title="statement not covered" >          overlay.path.data.rotationIcon.rotate(180);</span>
+        }
+&nbsp;
+      }
+    },
+&nbsp;
+    onResize:function(item,overlay){
+      <span class="missing-if-branch" title="else path not taken" >E</span>if(item._name.toString().indexOf(this.partOfPrefix)!== -1){
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(item._name.toString().indexOf('delete') !==-1){
+          item.data.self.setPosition(item.data.self.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.parent.data.rotation)));
+&nbsp;
+          <span class="missing-if-branch" title="else path not taken" >E</span>if(item.data.parent.contains(item.position)){
+            item.data.self.rotate(180,item.data.self.getData('pivot'));
+            item.data.self.rotate(180);
+          }
+&nbsp;
+          item.data.self.resize(24 *  1 / overlay.paperScope.view.zoom);
+        }
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(item._name.toString().indexOf('rotation') !== -1){
+<span class="cstat-no" title="statement not covered" >          item.data.self.setPosition(item.data.self.getData('pivot').add(new overlay.paperScope.Point(0, 21 / overlay.paperScope.view.zoom).rotate(item.data.parent.data.rotation)));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          if(item.data.parent.contains(item.position)){</span>
+<span class="cstat-no" title="statement not covered" >            item.data.self.rotate(180,item.data.self.getData('pivot'));</span>
+<span class="cstat-no" title="statement not covered" >            item.data.self.rotate(180);</span>
+          }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          item.data.self.resize(16 *  1 / overlay.paperScope.view.zoom);</span>
+        }
+&nbsp;
+      }
+    },
+&nbsp;
+    onMouseMove: function(event, overlay) {
+      var hitResult = overlay.paperScope.project.hitTest(event.point, overlay.hitOptions);
+      <span class="missing-if-branch" title="else path not taken" >E</span>if(hitResult &amp;&amp; hitResult.item._name.toString().indexOf(this.idPrefix)!==-1){
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(!overlay.disabled &amp;&amp; overlay.hoveredPath &amp;&amp; hitResult.item._name.toString().indexOf(overlay.hoveredPath._name.toString()) !==-1){
+          this.setCursor(hitResult,overlay);
+        }
+      }
+    },
+&nbsp;
+    setCursor:function(hitResult,overlay){
+&nbsp;
+      if(hitResult.type === 'stroke'){
+        jQuery(overlay.viewer.canvas).css('cursor','move');
+        return;
+      }
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(hitResult.type === 'pixel'){
+<span class="cstat-no" title="statement not covered" >        jQuery(overlay.viewer.canvas).css('cursor', 'pointer');</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+&nbsp;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if(hitResult.segment){
+        jQuery(overlay.viewer.canvas).css('cursor','pointer');
+      }
+&nbsp;
+    },
+&nbsp;
+    onMouseDown: function(event, overlay) {
+      var hitResult = overlay.paperScope.project.hitTest(event.point, overlay.hitOptions);
+      if (hitResult &amp;&amp; hitResult.item._name.toString().indexOf(this.idPrefix) != -1) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (overlay.mode !== 'deform' &amp;&amp; overlay.mode !== 'translate' &amp;&amp; overlay.mode !== 'create') {
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (hitResult.item._name.toString().indexOf(this.partOfPrefix) !== -1) {
+<span class="cstat-no" title="statement not covered" >            hitResult.item.data.self.onMouseDown(); </span>// TODO should check this for memory leak
+<span class="cstat-no" title="statement not covered" >            if(overlay.mode === 'rotate'){</span>
+<span class="cstat-no" title="statement not covered" >              overlay.path = hitResult.item.data.self.getItem().data.parent;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+&nbsp;
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (hitResult.type === 'segment') {
+            overlay.mode = 'deform';
+            overlay.segment = null;
+            overlay.path = null;
+            this.setCursor(hitResult, overlay);
+          }
+&nbsp;
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (hitResult.type === 'stroke') {
+<span class="cstat-no" title="statement not covered" >            overlay.mode = 'translate';</span>
+<span class="cstat-no" title="statement not covered" >            overlay.segment = null;</span>
+<span class="cstat-no" title="statement not covered" >            overlay.path = null;</span>
+          }
+        }
+      }
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (overlay.mode === 'translate') {
+<span class="cstat-no" title="statement not covered" >        if (overlay.path) {</span>
+<span class="cstat-no" title="statement not covered" >          overlay.segment = null;</span>
+<span class="cstat-no" title="statement not covered" >          overlay.path = null;</span>
+<span class="cstat-no" title="statement not covered" >          overlay.mode = '';</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          overlay.path = hitResult.item;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+&nbsp;
+      if (overlay.mode === 'deform') {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (overlay.path) {
+<span class="cstat-no" title="statement not covered" >          overlay.segment = null;</span>
+<span class="cstat-no" title="statement not covered" >          overlay.path = null;</span>
+<span class="cstat-no" title="statement not covered" >          overlay.mode = '';</span>
+        } else {
+          overlay.path = hitResult.item;
+          overlay.segment = hitResult.segment;
+        }
+        return;
+      }
+      overlay.path = this.createShape(event.point, overlay);
+    },
+&nbsp;
+    onDoubleClick: <span class="fstat-no" title="function not covered" >function(event, overlay) {</span>
+&nbsp;
+    }
+&nbsp;
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

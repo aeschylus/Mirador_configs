@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/hud.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/widgets/hud.js</span></h1>
+    <h2>
+        Statements: <span class="metric">32.89% <small>(25 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">72.22% <small>(13 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">36.84% <small>(7 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">32.89% <small>(25 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/widgets/</a> &#187; hud.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">52</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.Hud = function(options) {
+&nbsp;
+    jQuery.extend(this, {
+      element:   null,
+      windowId:  null,
+      annoState: null,
+      annoEndpointAvailable: false,
+      eventEmitter: null
+    }, options);
+&nbsp;
+    this.init();
+  };
+&nbsp;
+  $.Hud.prototype = {
+&nbsp;
+    init: function() {
+      this.createStateMachines();
+&nbsp;
+      var showAnno = typeof this.showAnno !== 'undefined' ? this.showAnno : this.canvasControls.annotations.annotationLayer,
+      showImageControls = typeof this.showImageControls !== 'undefined' ? this.showImageControls : this.canvasControls.imageManipulation.manipulationLayer;
+      this.element = jQuery(this.template({
+        showNextPrev : this.showNextPrev,
+        showBottomPanel : typeof this.bottomPanelAvailable === 'undefined' ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: this.bottomPanelAvailable,
+        showAnno : showAnno,
+        showImageControls : showImageControls
+      })).appendTo(this.appendTo);
+&nbsp;
+      if (showAnno || showImageControls) {
+        this.contextControls = new $.ContextControls({
+          element: null,
+          container: this.element.find('.mirador-osd-context-controls'),
+          qtipElement: this.qtipElement,
+          mode: 'displayAnnotations',
+          windowId: this.windowId,
+          canvasControls: this.canvasControls,
+          annoEndpointAvailable: this.annoEndpointAvailable,
+          availableAnnotationTools: this.availableAnnotationTools,
+          availableAnnotationStylePickers: this.availableAnnotationStylePickers,
+          state: this.state,
+          eventEmitter: this.eventEmitter
+        });
+      }
+&nbsp;
+      this.listenForActions();
+      this.bindEvents();
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+      this.eventEmitter.subscribe('DISABLE_TOOLTIPS_BY_CLASS.' + this.windowId, <span class="fstat-no" title="function not covered" >function(event, className) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.element.find(className).qtip('disable');</span>
+      });
+&nbsp;
+      this.eventEmitter.subscribe('ENABLE_TOOLTIPS_BY_CLASS.' + this.windowId, <span class="fstat-no" title="function not covered" >function(event, className) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.element.find(className).qtip('enable');</span>
+      });
+&nbsp;
+      this.eventEmitter.subscribe('SET_STATE_MACHINE_POINTER.' + this.windowId, function(event) {
+        if (_this.annoState.current === 'none') {
+          _this.annoState.startup();
+        } else if (_this.annoState.current === 'off') {
+          _this.annoState.displayOn();
+        } else {
+          _this.annoState.choosePointer();
+        }
+      });
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+    },
+&nbsp;
+    createStateMachines: function() {
+      var _this = this,
+      duration = "200";
+&nbsp;
+      //add more to these as AnnoState becomes more complex
+      //initial state is 'none'
+      this.annoState = StateMachine.create({
+        events: [
+          { name: 'startup', from: 'none', to: 'off' },
+          { name: 'displayOn', from: 'off', to: 'pointer'},
+          { name: 'displayOff', from: ['pointer', 'shape'], to: 'off'},
+          { name: 'choosePointer', from: ['pointer', 'shape'], to: 'pointer'},
+          { name: 'chooseShape', from: 'pointer', to: 'shape'},
+          { name: 'changeShape', from: 'shape', to: 'shape'},
+          { name: 'refresh', from: 'pointer', to: 'pointer'},
+          { name: 'refresh', from: 'shape', to: 'shape'}
+        ],
+        callbacks: {
+          onstartup: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          ondisplayOn: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-annotations-layer', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            if (_this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >                  _this.contextControls.annotationShow();</span>
+            }
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('modeChange.' + _this.windowId, 'displayAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-pointer-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.hud-dropdown', 'hud-disabled']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('DISABLE_TOOLTIPS_BY_CLASS.'+_this.windowId, '.hud-dropdown');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('DEFAULT_CURSOR.' + _this.windowId);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          ondisplayOff: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            if (_this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-pointer-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.publish('CANCEL_ACTIVE_ANNOTATIONS.'+_this.windowId);</span>
+<span class="cstat-no" title="statement not covered" >              _this.contextControls.annotationHide();</span>
+            }
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-annotations-layer', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('modeChange.' + _this.windowId, 'default');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onchoosePointer: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-pointer-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.hud-dropdown', 'hud-disabled']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('DISABLE_TOOLTIPS_BY_CLASS.'+_this.windowId, '.hud-dropdown');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('modeChange.' + _this.windowId, 'displayAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('DEFAULT_CURSOR.' + _this.windowId);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onchooseShape: <span class="fstat-no" title="function not covered" >function(event, from, to, shape) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-pointer-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.hud-dropdown', 'hud-disabled']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('ENABLE_TOOLTIPS_BY_CLASS.'+_this.windowId, '.hud-dropdown');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-'+shape+'-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('modeChange.' + _this.windowId, 'creatingAnnotation');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('CROSSHAIR_CURSOR.' + _this.windowId);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('toggleDrawingTool.'+_this.windowId, shape);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onchangeShape: <span class="fstat-no" title="function not covered" >function(event, from, to, shape) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-pointer-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.hud-dropdown', 'hud-disabled']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('ENABLE_TOOLTIPS_BY_CLASS.'+_this.windowId, '.hud-dropdown');</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-'+shape+'-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('CROSSHAIR_CURSOR.' + _this.windowId);</span>
+            //don't need to trigger a mode change, just change tool
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('toggleDrawingTool.'+_this.windowId, shape);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onrefresh: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+            //TODO
+          }
+        }
+      });
+&nbsp;
+      this.manipulationState = StateMachine.create({
+        events: [
+          { name: 'startup',  from: 'none',  to: 'manipulationOff' },
+          { name: 'displayOn',  from: 'manipulationOff',  to: 'manipulationOn' },
+          { name: 'displayOff', from: 'manipulationOn', to: 'manipulationOff' }
+        ],
+        callbacks: {
+          onstartup: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              manipulationState: to
+            });
+          },
+          ondisplayOn: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-manipulation-toggle', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.contextControls.manipulationShow();</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              manipulationState: to
+            });
+          },
+          ondisplayOff: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.contextControls.manipulationHide();</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-manipulation-toggle', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              manipulationState: to
+            });
+          }
+        }
+      });
+    },
+&nbsp;
+    template: $.Handlebars.compile([
+                                 '&lt;div class="mirador-hud"&gt;',
+                                 '{{#if showNextPrev}}',
+                                 '&lt;a class="mirador-osd-previous hud-control "&gt;',
+                                 '&lt;i class="fa fa-3x fa-chevron-left "&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '&lt;div class="mirador-osd-context-controls hud-container"&gt;',
+                                 '{{#if showAnno}}',
+                                  '&lt;div class="mirador-osd-annotation-controls"&gt;',
+                                  '&lt;a class="mirador-osd-annotations-layer hud-control" role="button" title="{{t "annotationTooltip"}}" aria-label="{{t "annotationTooltip"}}"&gt;',
+                                  '&lt;i class="fa fa-lg fa-comments"&gt;&lt;/i&gt;',
+                                  '&lt;/a&gt;',
+                                  '&lt;/div&gt;',
+                                 '{{/if}}',
+                                 '{{#if showImageControls}}',
+                                  '&lt;div class="mirador-manipulation-controls"&gt;',
+                                  '&lt;a class="mirador-manipulation-toggle hud-control" role="button" title="{{t "imageManipulationTooltip"}}" aria-label="{{t "imageManipulationTooltip"}}"&gt;',
+                                  '&lt;i class="material-icons"&gt;tune&lt;/i&gt;',
+                                  '&lt;/a&gt;',
+                                  '&lt;/div&gt;',
+                                 '{{/if}}',
+                                 '&lt;/div&gt;',
+                                 '{{#if showNextPrev}}',
+                                 '&lt;a class="mirador-osd-next hud-control "&gt;',
+                                 '&lt;i class="fa fa-3x fa-chevron-right"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '{{#if showBottomPanel}}',
+                                 '&lt;a class="mirador-osd-toggle-bottom-panel hud-control" role="button" aria-label="Toggle Bottom Panel"&gt;',
+                                 '&lt;i class="fa fa-2x fa-ellipsis-h"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '&lt;div class="mirador-pan-zoom-controls hud-control"&gt;',
+                                 '&lt;a class="mirador-osd-up hud-control" role="button" aria-label="Move image up"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-up"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-right hud-control" role="button" aria-label="Move image right"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-right"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-down hud-control" role="button" aria-label="Move image down"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-down"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-left hud-control" role="button" aria-label="Move image left"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-left"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-zoom-in hud-control" role="button" aria-label="Zoom in"&gt;',
+                                 '&lt;i class="fa fa-plus-circle"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-zoom-out hud-control" role="button" aria-label="Zoom out"&gt;',
+                                 '&lt;i class="fa fa-minus-circle"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-go-home hud-control" role="button" aria-label="Reset image bounds"&gt;',
+                                 '&lt;i class="fa fa-home"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;/div&gt;',
+                                 '&lt;/div&gt;'
+    ].join(''))
+&nbsp;
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

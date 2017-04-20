@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/viewer/manifestsPanel.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/viewer/manifestsPanel.js</span></h1>
+    <h2>
+        Statements: <span class="metric">98.31% <small>(58 / 59)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(4 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">95.24% <small>(20 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">98.25% <small>(56 / 57)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/viewer/</a> &#187; manifestsPanel.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+    $.ManifestsPanel = function(options) {
+&nbsp;
+        jQuery.extend(true, this, {
+            element:                    null,
+            listItems:                  null,
+            appendTo:                   null,
+            manifestListItems:          [],
+            manifestListElement:        null,
+            manifestLoadStatusIndicator: null,
+            resultsWidth:               0,
+            state:                      null,
+            eventEmitter:               null
+        }, options);
+&nbsp;
+        var _this = this;
+        _this.init();
+        
+    };
+&nbsp;
+    $.ManifestsPanel.prototype = {
+&nbsp;
+        init: function() {
+            this.element = jQuery(this.template({
+                showURLBox : this.state.getStateProperty('showAddFromURLBox')
+            })).appendTo(this.appendTo);
+            this.manifestListElement = this.element.find('ul');
+            
+            //this code gives us the max width of the results area, used to determine how many preview images to show
+            //cloning the element and adjusting the display and visibility means it won't break the normal flow
+            var clone = this.element.clone().css("visibility","hidden").css("display", "block").appendTo(this.appendTo);
+            this.resultsWidth = clone.find('.select-results').outerWidth();
+            this.controlsHeight = clone.find('.manifest-panel-controls').outerHeight();
+            this.paddingListElement = this.controlsHeight;
+            this.manifestListElement.css("padding-bottom", this.paddingListElement);
+            clone.remove();
+            
+            // this.manifestLoadStatusIndicator = new $.ManifestLoadStatusIndicator({
+            //   manifests: this.parent.manifests,
+            //   appendTo: this.element.find('.select-results')
+            // });
+            this.bindEvents();
+            this.listenForActions();
+        },
+&nbsp;
+        listenForActions: function() {
+          var _this = this;
+&nbsp;
+          // handle subscribed events
+          _this.eventEmitter.subscribe('manifestsPanelVisible.set', function(_, stateValue) {
+            _this.onPanelVisible(_, stateValue);
+          });
+&nbsp;
+          _this.eventEmitter.subscribe('manifestReceived', function(event, newManifest) {
+            _this.onManifestReceived(event, newManifest);
+          });
+        },
+&nbsp;
+        bindEvents: function() {
+            var _this = this;
+&nbsp;
+            // handle interface events
+            this.element.find('form#url-load-form').on('submit', function(event) {
+              event.preventDefault();
+              _this.addManifestUrl(jQuery(this).find('input').val());
+            });
+&nbsp;
+            this.element.find('.remove-object-option').on('click', function(event) {
+              _this.togglePanel(event);
+            });
+&nbsp;
+            // Filter manifests based on user input
+            this.element.find('#manifest-search').on('keyup input', function(event) {
+              _this.filterManifests(this.value);
+            });
+&nbsp;
+            this.element.find('#manifest-search-form').on('submit', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >              event.preventDefault();</span>
+            });
+&nbsp;
+            jQuery(window).resize($.throttle(function() {
+              _this.resizePanel();
+            }, 50, true));
+        },
+        
+        hide: function() {
+            var _this = this;
+            jQuery(this.element).hide({effect: "fade", duration: 160, easing: "easeOutCubic"});
+        },
+&nbsp;
+        show: function() {
+            var _this = this;
+            jQuery(this.element).show({effect: "fade", duration: 160, easing: "easeInCubic"});
+        },
+        
+        addManifestUrl: function(url) {
+          var _this = this;
+          _this.eventEmitter.publish('ADD_MANIFEST_FROM_URL', [url, "(Added from URL)"]);
+        },
+        
+        togglePanel: function(event) {
+          var _this = this;
+          _this.eventEmitter.publish('TOGGLE_LOAD_WINDOW');
+        },
+        
+        filterManifests: function(value) {
+          var _this = this;
+          if (value.length &gt; 0) {
+             _this.element.find('.items-listing li').show().filter(function() {
+                return jQuery(this).text().toLowerCase().indexOf(value.toLowerCase()) === -1;
+             }).hide();
+          } else {
+             _this.element.find('.items-listing li').show();
+          }
+        },
+&nbsp;
+        resizePanel: function() {
+          var _this = this;
+          var clone = _this.element.clone().css("visibility","hidden").css("display", "block").appendTo(_this.appendTo);
+          _this.resultsWidth = clone.find('.select-results').outerWidth();
+          clone.remove();
+          _this.eventEmitter.publish("manifestPanelWidthChanged", _this.resultsWidth);
+        },
+        
+        onPanelVisible: function(_, stateValue) {
+          var _this = this;
+          if (stateValue) { _this.show(); return; }
+           _this.hide();
+        },
+&nbsp;
+        onManifestReceived: function(event, newManifest) {
+          var _this = this;
+          _this.manifestListItems.push(new $.ManifestListItem({ 
+            manifest: newManifest, 
+            resultsWidth: _this.resultsWidth, 
+            state: _this.state,
+            eventEmitter: _this.eventEmitter,
+            appendTo: _this.manifestListElement }));
+          _this.element.find('#manifest-search').keyup();
+        },
+&nbsp;
+        template: $.Handlebars.compile([
+          '&lt;div id="manifest-select-menu"&gt;',
+          '&lt;div class="container"&gt;',
+            '&lt;div class="manifest-panel-controls"&gt;',
+              '&lt;a class="remove-object-option"&gt;&lt;i class="fa fa-times fa-lg fa-fw"&gt;&lt;/i&gt;{{t "close"}}&lt;/a&gt;',
+              '&lt;div id="load-controls"&gt;',
+                '{{#if showURLBox}}',
+                  '&lt;form action="" id="url-load-form"&gt;',
+                    '&lt;label for="url-loader"&gt;{{t "addNewObject"}}:&lt;/label&gt;',
+                    '&lt;input type="text" id="url-loader" name="url-load" placeholder="http://..."&gt;',
+                    '&lt;input type="submit" value="{{t "load"}}"&gt;',
+                  '&lt;/form&gt;',
+                '{{/if}}',
+                '&lt;form action="" id="manifest-search-form"&gt;',
+                  '&lt;label for="manifest-search"&gt;{{t "filterObjects"}}:&lt;/label&gt;',
+                  '&lt;input id="manifest-search" type="text" name="manifest-filter"&gt;',
+                '&lt;/form&gt;',
+              '&lt;/div&gt;',
+            '&lt;/div&gt;',
+              '&lt;div class="select-results"&gt;',
+                '&lt;ul class="items-listing"&gt;',
+                '&lt;/ul&gt;',
+              '&lt;/div&gt;',
+          '&lt;/div&gt;',
+          '&lt;/div&gt;'
+        ].join(''))
+    };
+&nbsp;
+}(Mirador));
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

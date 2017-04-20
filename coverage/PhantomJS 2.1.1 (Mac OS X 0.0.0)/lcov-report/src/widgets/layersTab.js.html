@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/layersTab.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/widgets/layersTab.js</span></h1>
+    <h2>
+        Statements: <span class="metric">48.05% <small>(37 / 77)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">37.5% <small>(6 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">34.78% <small>(8 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">47.37% <small>(36 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/widgets/</a> &#187; layersTab.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.LayersTab = function(options) {
+    jQuery.extend(true, this, {
+      windowId:          null,
+      element:           null,
+      appendTo:          null,
+      manifest:          null,
+      visible:           null,
+      state:             null,
+      eventEmitter:      null
+    }, options);
+&nbsp;
+    this.init();
+  };
+&nbsp;
+  $.LayersTab.prototype = {
+    init: function() {
+      var _this = this;
+&nbsp;
+      this.localState({
+        id: 'layersTab',
+        visible: this.visible,
+        active: true, // needs to be a function of the window state
+        canvasID: _this.canvasID,
+        empty: false // needs to be a function of the canvasModel
+      }, true);
+&nbsp;
+      this.render(this.localState());
+      this.bindEvents();
+      this.listenForActions();
+    },
+&nbsp;
+    localState: function(state, initial) {
+      var _this = this;
+      if (!arguments.length) return this.layerTabState;
+      this.layerTabState = state;
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!initial) {
+<span class="cstat-no" title="statement not covered" >        _this.eventEmitter.publish('layersTabStateUpdated.' + this.windowId, this.layerTabState);</span>
+      }
+&nbsp;
+      return this.layerTabState;
+    },
+&nbsp;
+    tabStateUpdated: <span class="fstat-no" title="function not covered" >function(visible) {</span>
+<span class="cstat-no" title="statement not covered" >      var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >      localState.visible = localState.visible ? false : true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.localState(localState);</span>
+    },
+&nbsp;
+    canvasIdUpdated: <span class="fstat-no" title="function not covered" >function(event, canvasID) {</span>
+<span class="cstat-no" title="statement not covered" >      var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >      localState.canvasID = canvasID;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.localState(localState);</span>
+    },
+&nbsp;
+    imageFocusUpdated: <span class="fstat-no" title="function not covered" >function(focus) {</span>
+<span class="cstat-no" title="statement not covered" >      var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >      localState.active = (focus === 'ThumbnailsView') ? false : true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.localState(localState);</span>
+    },
+&nbsp;
+    updateImageResourceStatus: <span class="fstat-no" title="function not covered" >function(event, imageResource) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      ['loaded', 'requested', 'initialized', 'drawn'].forEach(<span class="fstat-no" title="function not covered" >function(statusString){</span></span>
+<span class="cstat-no" title="statement not covered" >        _this.element.find('.layers-list-item[data-imageid="'+ imageResource.id + '"]').removeClass(statusString);</span>
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.element.find('.layers-list-item[data-imageid="'+ imageResource.id + '"]').addClass(imageResource.getStatus());</span>
+    },
+    showImageResource: <span class="fstat-no" title="function not covered" >function(event, imageResource) {</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.visibility-toggle[data-imageid="'+ imageResource.id + '"]').prop('checked', true);</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.visibility-label[data-imageid="'+ imageResource.id + '"]').text('on');</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-slider[data-imageid="'+ imageResource.id + '"]').prop('disabled', false);</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-label[data-imageid="'+ imageResource.id + '"]').removeClass('disabled').text("(" + Math.ceil(imageResource.getOpacity()*100) + ")%");</span>
+    },
+    hideImageResource: <span class="fstat-no" title="function not covered" >function(event, imageResource) {</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.visibility-toggle[data-imageid="'+ imageResource.id + '"]').prop('checked', false);</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.visibility-label[data-imageid="'+ imageResource.id + '"]').text('off');</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-slider[data-imageid="'+ imageResource.id + '"]').prop('disabled', true);</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-label[data-imageid="'+ imageResource.id + '"]').addClass('disabled').text("(disabled)");</span>
+    },
+    updateImageResourceOpacity: <span class="fstat-no" title="function not covered" >function(event, imageResource) {</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-slider[data-imageid="'+ imageResource.id + '"]').val(imageResource.getOpacity()*100);</span>
+<span class="cstat-no" title="statement not covered" >      this.element.find('.opacity-label[data-imageid="'+ imageResource.id + '"]').text("(" + Math.ceil(imageResource.getOpacity()*100) + ")%");</span>
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+&nbsp;
+      // This event is fired by the component itself anytime its local state is updated.
+      _this.eventEmitter.subscribe('layersTabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.render(data);</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('tabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.tabStateUpdated(data.layersTab);</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('currentCanvasIDUpdated.' + _this.windowId, _this.canvasIdUpdated.bind(_this));
+      _this.eventEmitter.subscribe('image-status-updated' + _this.windowId, _this.updateImageResourceStatus.bind(_this));
+      _this.eventEmitter.subscribe('image-show' + _this.windowId, _this.showImageResource.bind(_this));
+      _this.eventEmitter.subscribe('image-hide' + _this.windowId, _this.hideImageResource.bind(_this));
+      _this.eventEmitter.subscribe('image-opacity-updated' + _this.windowId, _this.updateImageResourceOpacity.bind(_this));
+&nbsp;
+      _this.eventEmitter.subscribe('focusUpdated' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, focus) {</span>
+&nbsp;
+&nbsp;
+        // update the disabled state of the layersTab
+        // since it cannot be used in overview mode
+        // but is visible/available in image mode.
+<span class="cstat-no" title="statement not covered" >        _this.imageFocusUpdated(focus);</span>
+      });
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+&nbsp;
+      this.element.find('img').on('load', <span class="fstat-no" title="function not covered" >function(event) {</span>
+        // fades in thumbs when they finish loading.
+<span class="cstat-no" title="statement not covered" >        jQuery(this).addClass('loaded');</span>
+<span class="cstat-no" title="statement not covered" >        jQuery(this).closest('.thumb-container').removeClass('awaiting-thumbnail');</span>
+      });
+&nbsp;
+      this.element.find('img').on('error', <span class="fstat-no" title="function not covered" >function(event) {</span>
+        // prevents failed images from showing.
+<span class="cstat-no" title="statement not covered" >        jQuery(this).addClass('failed');</span>
+<span class="cstat-no" title="statement not covered" >        jQuery(this).closest('.thumb-container').removeClass('awaiting-thumbnail');</span>
+<span class="cstat-no" title="statement not covered" >        jQuery(this).closest('.thumb-container').addClass('thumb-failed');</span>
+      });
+&nbsp;
+      this.element.on('input', '.opacity-slider', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        var canvasModel = _this.canvases[_this.localState().canvasID],</span>
+            eventedImageResource = canvasModel.getImageById(event.currentTarget.attributes['data-imageid'].nodeValue);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        eventedImageResource.setOpacity(event.currentTarget.value/100);</span>
+      });
+&nbsp;
+      this.element.on('change', '.visibility-toggle', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        var canvasModel = _this.canvases[_this.localState().canvasID],</span>
+            eventedImageResource = canvasModel.getImageById(event.currentTarget.attributes['data-imageid'].nodeValue);
+<span class="cstat-no" title="statement not covered" >        if(event.currentTarget.checked) {</span>
+<span class="cstat-no" title="statement not covered" >          eventedImageResource.show();</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          eventedImageResource.hide();</span>
+        }
+      });
+      // this.element.find('.mirador-osd-next').on('dragstart', function() {
+      // });
+      // this.element.find('.mirador-osd-next').on('dragover', function() {
+      //   check that child image (in images with "choice") is not dragged outside its parent.
+      // });
+      // this.element.find('.mirador-osd-next').on('drop', function() {
+      //   Reorder the images on the canvas.
+      // });
+    },
+&nbsp;
+    render: function(state) {
+      var _this = this,
+          canvasModel = _this.canvases[state.canvasID],
+          templateData = {
+            active: state.active ? '' : <span class="branch-1 cbranch-no" title="branch not covered" >'inactive',</span>
+            hasLayers: canvasModel.images.length &gt; 0,
+            canvasTitle: canvasModel.label,
+            layers: canvasModel.images.map(function(imageResource){
+              return {
+                imageId: imageResource.id,
+                title: imageResource.label,
+                opacity: imageResource.getOpacity()*100, // scale factor for limitations of html5 slider element
+                loadingStatus: imageResource.getStatus(),
+                visibility: imageResource.getVisible(),
+                url: imageResource.thumbUrl
+              };
+            })
+          };
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.element) {
+<span class="cstat-no" title="statement not covered" >        _this.appendTo.find(".layersPanel").remove();</span>
+      }
+      this.element = jQuery(_this.template(templateData)).appendTo(_this.appendTo);
+&nbsp;
+      _this.bindEvents();
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (state.visible) {
+<span class="cstat-no" title="statement not covered" >        this.element.show();</span>
+      } else {
+        this.element.hide();
+      }
+    },
+&nbsp;
+    template: Handlebars.compile([
+      '&lt;div class="layersPanel {{active}}"&gt;',
+      '&lt;h3&gt;Images for {{canvasTitle}}&lt;/h3&gt;',
+      '{{#if hasLayers}}',
+      '&lt;ul class="layers-listing"&gt;',
+      '{{#each layers}}',
+      '&lt;li class="layers-list-item {{loadingStatus}}" data-imageid="{{imageId}}"&gt;',
+      '&lt;h4&gt;{{this.title}}&lt;/h4&gt;',
+      '&lt;div class="thumb-container awaiting-thumbnail"&gt;',
+      '&lt;img class="layer-thumb" src="{{url}}" alt="{{canvasTitle}} title="{{canvasTitle}}"&gt;',
+      '&lt;span class="spinner"&gt;&lt;i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;',
+      '&lt;span class="failed"&gt;&lt;i class="fa fa-ban fa-3x fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;',
+      '&lt;span class="thumb-failed"&gt;&lt;i class="fa fa-picture-o fa-3x fa-fw"&gt;&lt;/i&gt;&lt;/span&gt;',
+      '&lt;/div&gt;',
+      '&lt;form&gt;',
+      '&lt;div&gt;',
+      '&lt;input class="visibility-toggle" data-imageid="{{imageId}}" type=checkbox {{#if visibility}}checked{{/if}}&gt;',
+      '&lt;label&gt; visibility (&lt;span class="visibility-label" data-imageid="{{imageId}}"&gt;{{#if visibility}}on{{else}}off{{/if}}&lt;/span&gt;)&lt;/label&gt;',
+      '&lt;/div&gt;',
+      '&lt;label&gt;opacity &lt;span class="opacity-label {{#unless visibility}}disabled{{/unless}}" data-imageid="{{imageId}}"&gt;',
+      '{{#unless visibility}}(disabled){{else}}({{opacity}})%{{/unless}}',
+      '&lt;/span&gt;&lt;/label&gt;',
+      '&lt;input class="opacity-slider" data-imageid="{{imageId}}" type="range" min="0" max="100" step="2" value="{{opacity}}" {{#unless visibility}}disabled{{/unless}}&gt;',
+      '&lt;/form&gt;',
+      '&lt;/li&gt;',
+      '{{/each}}',
+      '&lt;/ul&gt;',
+      '{{else}}',
+      '&lt;h4&gt;There are no image layers on this canvas&lt;/h4&gt;',
+      '{{/if}}',
+      '&lt;/div&gt;',
+    ].join(''))
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils/jsonLd.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/utils/jsonLd.js</span></h1>
+    <h2>
+        Statements: <span class="metric">97.44% <small>(38 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">97.06% <small>(33 / 34)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.44% <small>(38 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/utils/</a> &#187; jsonLd.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64</span>
+<span class="cline-any cline-yes">64</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+  /** Get the language to use for displaying the given propertyValue.
+   *
+   * Uses the algorithm described in
+   * http://iiif.io/api/presentation/2.1/#language-of-property-values
+   */
+  function getDisplayLanguage(languages, items) {
+    var itemLanguages = items.map(function(itm) {
+      if (typeof itm === 'string') {
+        return null;
+      } else {
+        return itm['@language'];
+      }
+    });
+&nbsp;
+    var bestLanguageMatch = null;
+    jQuery.each(languages, function(idx, lang) {
+      if (bestLanguageMatch !== null) {
+        return false;
+      } else {
+        if (itemLanguages.indexOf(lang) !== -1) {
+          bestLanguageMatch = lang;
+        }
+      }
+    });
+&nbsp;
+    // Only pick the first available language if **all** property values
+    // have an associated language
+    if (bestLanguageMatch === null &amp;&amp; itemLanguages.indexOf(null) === -1) {
+      bestLanguageMatch = itemLanguages[0];
+    }
+    return bestLanguageMatch;
+  }
+&nbsp;
+  $.JsonLd = {
+    getTextValue: function(propertyValue, language) {
+      var languages = window.navigator.languages || ['en'];
+      if (typeof language === 'string') {
+        languages = [language].concat(languages);
+      } else <span class="missing-if-branch" title="if path not taken" >I</span>if (Array.isArray(language)) {
+<span class="cstat-no" title="statement not covered" >        languages = language.concat(languages);</span>
+      }
+&nbsp;
+      if (typeof propertyValue === 'undefined' || propertyValue === null) {
+        return '';
+      }
+      else if (typeof propertyValue === 'string') {
+        return $.sanitizeHtml(propertyValue);
+      }
+      else if (Array.isArray(propertyValue)) {
+        var displayLanguage = getDisplayLanguage(languages, propertyValue);
+        var text = '';
+        jQuery.each(propertyValue, function(idx, item) {
+          var textToAdd = '';
+          if (typeof item === 'string' &amp;&amp; displayLanguage === null) {
+            textToAdd = item;
+          } else if (item['@language'] === displayLanguage) {
+            textToAdd = item['@value'];
+          }
+          if (textToAdd !== '' &amp;&amp; text !== '') {
+            text += '&lt;br/&gt;';
+          }
+          text += textToAdd;
+        });
+        return $.sanitizeHtml(text);
+      } else {
+        return $.sanitizeHtml(propertyValue['@value']);
+      }
+    }
+  };
+  
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

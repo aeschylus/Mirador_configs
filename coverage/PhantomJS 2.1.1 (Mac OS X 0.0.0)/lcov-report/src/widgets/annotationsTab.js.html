@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/annotationsTab.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/widgets/annotationsTab.js</span></h1>
+    <h2>
+        Statements: <span class="metric">3.66% <small>(3 / 82)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">3.57% <small>(1 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">3.85% <small>(3 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/widgets/</a> &#187; annotationsTab.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+    $.AnnotationsTab = <span class="fstat-no" title="function not covered" >function(options) {</span>
+<span class="cstat-no" title="statement not covered" >        jQuery.extend(true, this, {</span>
+            element:           null,
+            appendTo:          null,
+            manifest:          null,
+            visible:           null,
+            state:             null,
+            eventEmitter:      null
+        }, options);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.init();</span>
+    };
+&nbsp;
+    $.AnnotationsTab.prototype = {
+        init: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >            this.windowId = this.windowId;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.localState({</span>
+                id: 'annotationsTab',
+                visible: this.visible,
+                annotationLists: [],
+                selectedList: null,
+                empty: true,
+                focusedList: null
+            }, true);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.listenForActions();</span>
+<span class="cstat-no" title="statement not covered" >            this.render(this.localState());</span>
+<span class="cstat-no" title="statement not covered" >            this.loadTabComponents();</span>
+<span class="cstat-no" title="statement not covered" >            this.bindEvents();</span>
+        },
+        localState: <span class="fstat-no" title="function not covered" >function(state, initial) {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >            if (!arguments.length) <span class="cstat-no" title="statement not covered" >return this.annoTabState;</span></span>
+<span class="cstat-no" title="statement not covered" >            this.annoTabState = state;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (!initial) {</span>
+<span class="cstat-no" title="statement not covered" >                _this.eventEmitter.publish('annotationsTabStateUpdated.' + this.windowId, this.annoTabState);</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return this.annoTabState;</span>
+        },
+        loadTabComponents: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+&nbsp;
+        },
+        tabStateUpdated: <span class="fstat-no" title="function not covered" >function(visible) {</span>
+<span class="cstat-no" title="statement not covered" >            var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >            localState.visible = localState.visible ? false : true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.localState(localState);</span>
+        },
+        annotationListLoaded: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this,</span>
+                annotationSources = [],
+                localState = this.localState();
+<span class="cstat-no" title="statement not covered" >            jQuery.each(_this.state.getWindowAnnotationsList(_this.windowId), <span class="fstat-no" title="function not covered" >function(index, value) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if(typeof value.endpoint === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >                    annotationSources.push('manifest');</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    annotationSources.push(value.endpoint.name);</span>
+                }
+            });
+&nbsp;
+            // make unique
+<span class="cstat-no" title="statement not covered" >            annotationSources = annotationSources.filter(<span class="fstat-no" title="function not covered" >function(itm,i,annotationSources){</span></span>
+<span class="cstat-no" title="statement not covered" >                return i==annotationSources.indexOf(itm);</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            localState.annotationLists = annotationSources.map(<span class="fstat-no" title="function not covered" >function(annotationSource) {</span></span>
+                //var s = (annotationSource === localState.selectedList ? true : false);
+<span class="cstat-no" title="statement not covered" >                return {</span>
+                    annotationSource: annotationSource,
+                    layer: null,
+                    selected: (annotationSource === localState.selectedList ? true : false),
+                    focused: false
+                };
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(localState.annotationLists.length){</span>
+<span class="cstat-no" title="statement not covered" >              localState.empty = false;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.localState(localState);</span>
+        },
+        deselectList: <span class="fstat-no" title="function not covered" >function(listId) {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >            var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >            localState.selectedList = null;</span>
+<span class="cstat-no" title="statement not covered" >            localState.annotationLists.forEach(<span class="fstat-no" title="function not covered" >function(list){</span> <span class="cstat-no" title="statement not covered" >list.selected = false; </span>});</span>
+<span class="cstat-no" title="statement not covered" >            this.localState(localState);</span>
+        },
+        selectList: <span class="fstat-no" title="function not covered" >function(listId) {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >            var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >            localState.selectedList = listId;</span>
+<span class="cstat-no" title="statement not covered" >            localState.annotationLists.forEach(<span class="fstat-no" title="function not covered" >function(list){</span> <span class="cstat-no" title="statement not covered" >list.selected = list.annotationSource === listId ? true : false; </span>});</span>
+<span class="cstat-no" title="statement not covered" >            this.localState(localState);</span>
+        },
+        focusList: <span class="fstat-no" title="function not covered" >function(listId) {</span>
+<span class="cstat-no" title="statement not covered" >            var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >            localState.focusedList = listId;</span>
+<span class="cstat-no" title="statement not covered" >            localState.annotationLists.forEach(<span class="fstat-no" title="function not covered" >function(list){</span> <span class="cstat-no" title="statement not covered" >list.focused = list.annotationSource === listId ? true : false;}</span>);</span>
+<span class="cstat-no" title="statement not covered" >            this.localState(localState);</span>
+        },
+        toggle: <span class="fstat-no" title="function not covered" >function() {</span>},
+        listenForActions: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('annotationsTabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.render(data);</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('tabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.tabStateUpdated(data.annotationsTab);</span>
+            });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('annotationListLoaded.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.annotationListLoaded();</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('currentCanvasIDUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.subscribe('annotationListLoaded.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+<span class="cstat-no" title="statement not covered" >                  _this.annotationListLoaded();</span>
+              });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              _this.selectList(_this.localState().selectedList);</span>
+&nbsp;
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('listSelected.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, listId) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.selectList(listId);</span>
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _this.eventEmitter.subscribe('listDeselected.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, listId) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.deselectList(listId);</span>
+            });
+&nbsp;
+        },
+        bindEvents: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this,</span>
+                listItems = this.element.find('.annotationListItem');
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            listItems.on('click', <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+                //event.stopImmediatePropagation();
+<span class="cstat-no" title="statement not covered" >                var listClicked = jQuery(this).data('id');</span>
+<span class="cstat-no" title="statement not covered" >                if(_this.localState().selectedList === listClicked){</span>
+                    //_this.deselectList(listClicked);
+<span class="cstat-no" title="statement not covered" >                    _this.eventEmitter.publish('listDeselected.' + _this.windowId, listClicked);</span>
+                }else{
+                    //_this.selectList(listClicked);
+<span class="cstat-no" title="statement not covered" >                    _this.eventEmitter.publish('listSelected.' + _this.windowId, listClicked);</span>
+                }
+&nbsp;
+            });
+&nbsp;
+        },
+        render: <span class="fstat-no" title="function not covered" >function(state) {</span>
+<span class="cstat-no" title="statement not covered" >            var _this = this,</span>
+                templateData = {
+                    annotationSources: state.annotationLists
+                };
+<span class="cstat-no" title="statement not covered" >            if (!this.element) {</span>
+<span class="cstat-no" title="statement not covered" >                this.element = jQuery(_this.template(templateData)).appendTo(_this.appendTo);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                _this.appendTo.find(".annotationsPanel").remove();</span>
+<span class="cstat-no" title="statement not covered" >                this.element = jQuery(_this.template(templateData)).appendTo(_this.appendTo);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            _this.bindEvents();</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (state.visible) {</span>
+<span class="cstat-no" title="statement not covered" >                this.element.show();</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                this.element.hide();</span>
+            }
+        },
+        template: $.Handlebars.compile([
+            '&lt;div class="annotationsPanel"&gt;',
+            '&lt;ul class="annotationSources"&gt;',
+            '{{#each annotationSources}}',
+            '&lt;li class="annotationListItem {{#if this.selected}}selected{{/if}} {{#if this.focused }}focused{{/if}}" data-id="{{this.annotationSource}}"&gt;',
+                    '&lt;span&gt;{{this.annotationSource}}&lt;/span&gt;',
+            '&lt;/li&gt;',
+            '{{/each}}',
+            '&lt;/ul&gt;',
+            '&lt;/div&gt;',
+        ].join(''))
+    };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils/saveController.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/utils/saveController.js</span></h1>
+    <h2>
+        Statements: <span class="metric">80.57% <small>(141 / 175)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">71.11% <small>(64 / 90)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">75% <small>(33 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">80.92% <small>(140 / 173)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/utils/</a> &#187; saveController.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">107</span>
+<span class="cline-any cline-yes">535</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">3570</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2957</span>
+<span class="cline-any cline-yes">13898</span>
+<span class="cline-any cline-yes">13367</span>
+<span class="cline-any cline-yes">1063</span>
+<span class="cline-any cline-yes">12304</span>
+<span class="cline-any cline-yes">2780</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5141</span>
+<span class="cline-any cline-yes">22661</span>
+<span class="cline-any cline-yes">22130</span>
+<span class="cline-any cline-yes">1063</span>
+<span class="cline-any cline-yes">21067</span>
+<span class="cline-any cline-yes">4964</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">174</span>
+<span class="cline-any cline-yes">174</span>
+<span class="cline-any cline-yes">174</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2420</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2424</span>
+<span class="cline-any cline-yes">2423</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">74</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">74</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">74</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">74</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">25</span>
+<span class="cline-any cline-yes">23</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">27</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27</span>
+<span class="cline-any cline-yes">891</span>
+<span class="cline-any cline-yes">837</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">177</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.SaveController = function(config) {
+&nbsp;
+    jQuery.extend(true, this, {
+      currentConfig: null,
+      originalConfig: null, // Don't know if we really need this.
+      shareEndpoint: null, // the place where POST requests for new saved sessions will go
+      historySize: null, // wishful thinking for later.
+      sessionID: null,
+      slots: [],
+      eventEmitter: null
+    });
+&nbsp;
+    // error check - removes invalid annotation tools
+    if (config.availableAnnotationDrawingTools) {
+      config.availableAnnotationDrawingTools = jQuery.grep(config.availableAnnotationDrawingTools, function(element, index) {
+        return jQuery.inArray(element, $.DEFAULT_SETTINGS.availableAnnotationDrawingTools) &gt;= 0;
+      });
+    }
+&nbsp;
+    // error check on mainMenuSettings
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (config.mainMenuSettings &amp;&amp; !config.mainMenuSettings.buttons) {
+<span class="cstat-no" title="statement not covered" >      config.mainMenuSettings.buttons = {};</span>
+    }
+&nbsp;
+    // if a user used dot notation for nested settings, unpack
+    // e.g. windowSettings.canvasControls.annotations.annotationState
+<span class="fstat-no" title="function not covered" >    function index(previousValue,currentValue,currentIndex) {</span>
+<span class="cstat-no" title="statement not covered" >      var newObj = {};</span>
+<span class="cstat-no" title="statement not covered" >      newObj[currentValue] = previousValue;</span>
+<span class="cstat-no" title="statement not covered" >      return newObj;</span>
+    }
+    jQuery.each(config, function(key, value) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof key === "string" &amp;&amp; key.indexOf('.') !== -1) {
+<span class="cstat-no" title="statement not covered" >        var array = key.split('.').reverse();</span>
+<span class="cstat-no" title="statement not covered" >        var object = array.reduce(index, value);</span>
+<span class="cstat-no" title="statement not covered" >        delete config[key];</span>
+<span class="cstat-no" title="statement not covered" >        jQuery.extend(true, config, object);</span>
+      }
+    });
+&nbsp;
+    /*
+    We want to deep copy/merge nested objects in the config, but array values should be overwritten
+    So, stringify arrays so extend overwrites them and then convert them back to arrays
+    */
+    function iterateStringify(object) {
+      for (var property in object) {
+        if (object.hasOwnProperty(property)) {
+          if (object[property] instanceof Array) {
+            object[property] = JSON.stringify(object[property]);
+          } else if (typeof object[property] === "object") {
+            iterateStringify(object[property]);
+          } else {}
+        }
+      }
+    }
+    function iterateParse(object) {
+      for (var property in object) {
+        if (object.hasOwnProperty(property)) {
+          if (typeof object[property] === "string" &amp;&amp; object[property][0] === '[') {
+            object[property] = JSON.parse(object[property]);
+          } else if (typeof object[property] === "object") {
+            iterateParse(object[property]);
+          } else {}
+        }
+      }
+    }
+    iterateStringify(config);
+    var newConfig = jQuery.extend(true, {}, $.DEFAULT_SETTINGS, config);
+    iterateParse(newConfig);
+    this.init(newConfig);
+  };
+&nbsp;
+  $.SaveController.prototype = {
+&nbsp;
+    init: function(config) {
+      var _this = this;
+&nbsp;
+      this.eventEmitter = config.eventEmitter;
+&nbsp;
+      // Don't want to save session
+      if (config.saveSession === false) {
+        this.currentConfig = config;
+        this.bindEvents();
+        return false;
+      }
+&nbsp;
+      saveModule = config.jsonStorageEndpoint.module,
+      saveOptions = config.jsonStorageEndpoint.options;
+      _this.storageModule = new $[saveModule](saveOptions);
+&nbsp;
+      var sessionID = window.location.hash.substring(1); // will return empty string if none exists, causing the or statement below to evaluate to false, generating a new sesssionID.
+&nbsp;
+      if (sessionID) {
+        this.sessionID =  sessionID;
+      } else {
+        this.sessionID = $.genUUID(); // might want a cleaner thing for the url.
+      }
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (localStorage.getItem(this.sessionID)) {
+<span class="cstat-no" title="statement not covered" >        this.currentConfig = JSON.parse(localStorage.getItem(sessionID));</span>
+      } else {
+        var paramURL = window.location.search.substring(1);
+        if (paramURL) {
+          //get json from JSON storage and set currentConfig to it
+          var params = paramURL.split('=');
+          var jsonblob = params[1];
+          this.currentConfig = this.storageModule.readSync(jsonblob) || <span class="branch-1 cbranch-no" title="branch not covered" >config;</span>
+        } else {
+          this.currentConfig = config;
+        }
+      }
+      //remove empty hashes from config
+      this.currentConfig.windowObjects = jQuery.map(this.currentConfig.windowObjects, <span class="fstat-no" title="function not covered" >function(value, index) {</span>
+<span class="cstat-no" title="statement not covered" >        if (Object.keys(value).length === 0) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >        return value;</span>
+      });
+&nbsp;
+      //add UUIDs to parts of config that need them
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (this.currentConfig.windowObjects) {
+        jQuery.each(this.currentConfig.windowObjects, <span class="fstat-no" title="function not covered" >function(index, window) {</span>
+<span class="cstat-no" title="statement not covered" >          if (!window.id) {</span>
+<span class="cstat-no" title="statement not covered" >            window.id = $.genUUID();</span>
+          }
+        });
+      }
+&nbsp;
+      // see: http://html5demos.com/history and http://diveintohtml5.info/history.html
+      // put history stuff here, for a great cross-browser demo, see: http://browserstate.github.io/history.js/demo/
+      // http://stackoverflow.com/questions/17801614/popstate-passing-popped-state-to-event-handler
+&nbsp;
+      //also remove ?json bit so it's a clean URL
+      var cleanURL = window.location.href.replace(window.location.search, "");
+      if (window.location.hash) {
+       history.replaceState(this.currentConfig, "Mirador Session", cleanURL);
+      } else {
+       history.replaceState(this.currentConfig, "Mirador Session", cleanURL+"#"+this.sessionID);
+      }
+&nbsp;
+      this.bindEvents();
+&nbsp;
+    },
+&nbsp;
+    getWindowObjectById: function(windowId) {
+      var returnObject = null;
+      jQuery.each(this.currentConfig.windowObjects, function(index, window) {
+        if (window.id === windowId) {
+          returnObject = window;
+          return false;
+        }
+      });
+      return returnObject;
+    },
+&nbsp;
+    getWindowAnnotationsList: function(windowId) {
+      if (this.windowsAnnotationsLists) {
+        return this.windowsAnnotationsLists[windowId];
+      } else {
+        return null;
+      }
+    },
+&nbsp;
+    getSlots: function() {
+      return this.slots;
+    },
+&nbsp;
+    getWindowElement: function(windowId) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.windowsElements) {
+<span class="cstat-no" title="statement not covered" >        return this.windowsElements[windowId];</span>
+      } else {
+        return null;
+      }
+    },
+&nbsp;
+    getStateProperty: function(prop) {
+      return this.get(prop, 'currentConfig');
+    },
+&nbsp;
+    getManifestIndex: function(manifestUri) {
+      var manifestIndex = -1;
+      jQuery.each(this.currentConfig.data, function(index, dataObj) {
+        if (dataObj.manifestUri === manifestUri) {
+          manifestIndex = index;
+          return false;
+        }
+      });
+      return manifestIndex;
+    },
+&nbsp;
+    get: function(prop, parent) {
+      if (parent) {
+        return this[parent][prop];
+      }
+      return this[prop];
+    },
+&nbsp;
+    set: function(prop, value, options) {
+      var _this = this;
+      // when a property of the config is updated,
+      // save it to localStore.
+      if (options) {
+        this[options.parent][prop] = value;
+      } else {
+        this[prop] = value;
+      }
+      if (this.currentConfig.saveSession) {
+        this.save();
+      }
+      _this.eventEmitter.publish("saveControllerConfigUpdated");
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+      // listen to existing events and use the
+      // available data to update the appropriate
+      // field in the stored config.
+&nbsp;
+      _this.eventEmitter.subscribe('manifestsPanelVisible.set', function(event, manifestPanelVisible) {
+        _this.set("manifestPanelVisible", manifestPanelVisible, {parent: "currentConfig"} );
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('windowUpdated', function(event, options) {
+        var windowObjects = _this.currentConfig.windowObjects;
+        if (windowObjects &amp;&amp; windowObjects.length &gt; 0) {
+          jQuery.each(windowObjects, function(index, window){
+            if (window.id === options.id) {
+              jQuery.extend(windowObjects[index], options);
+            }
+          });
+        } else {
+          windowObjects = [options];
+        }
+        _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );
+      });
+&nbsp;
+      _this.eventEmitter.subscribe("imageBoundsUpdated", function(event, options) {
+        var windowObjects = _this.currentConfig.windowObjects;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (windowObjects &amp;&amp; windowObjects.length &gt; 0) {
+<span class="cstat-no" title="statement not covered" >          jQuery.each(windowObjects, <span class="fstat-no" title="function not covered" >function(index, window){</span></span>
+<span class="cstat-no" title="statement not covered" >            if (window.id === options.id) {</span>
+<span class="cstat-no" title="statement not covered" >              if (!windowObjects[index].windowOptions) {</span>
+<span class="cstat-no" title="statement not covered" >                windowObjects[index].windowOptions = {};</span>
+              }
+<span class="cstat-no" title="statement not covered" >              windowObjects[index].windowOptions.osdBounds = options.osdBounds;</span>
+            }
+          });
+        }
+        _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('ANNOTATIONS_LIST_UPDATED', function(event, options) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!_this.windowsAnnotationsLists) {
+          _this.windowsAnnotationsLists = {};
+        }
+        _this.windowsAnnotationsLists[options.windowId] = options.annotationsList;
+        _this.eventEmitter.publish('annotationListLoaded.' + options.windowId);
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('WINDOW_ELEMENT_UPDATED', function(event, options) {
+        if (!_this.windowsElements) {
+          _this.windowsElements = {};
+        }
+        _this.windowsElements[options.windowId] = options.element;
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('windowSlotAddressUpdated', <span class="fstat-no" title="function not covered" >function(event, options) {</span>
+<span class="cstat-no" title="statement not covered" >        var windowObjects = _this.currentConfig.windowObjects;</span>
+<span class="cstat-no" title="statement not covered" >        if (windowObjects &amp;&amp; windowObjects.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >          jQuery.each(windowObjects, <span class="fstat-no" title="function not covered" >function(index, window){</span></span>
+<span class="cstat-no" title="statement not covered" >            if (window.id === options.id) {</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.extend(windowObjects[index], options);</span>
+            }
+          });
+        } else {
+<span class="cstat-no" title="statement not covered" >          windowObjects = [options];</span>
+        }
+<span class="cstat-no" title="statement not covered" >        _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('manifestQueued', function(event, manifestObject, repository) {
+        var data = _this.currentConfig.data,
+        objectInConfig = false,
+        url = manifestObject.uri;
+&nbsp;
+        jQuery.each(data, function(index, manifestObject){
+          if (manifestObject.manifestUri === url) {
+            objectInConfig = true;
+          }
+        });
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!objectInConfig) {
+<span class="cstat-no" title="statement not covered" >          data.push({"manifestUri":url, "location":repository});</span>
+<span class="cstat-no" title="statement not covered" >          _this.set("data", data, {parent: "currentConfig"});</span>
+        }
+        var manifests = _this.currentConfig.manifests;
+        manifests[url] = manifestObject;
+        _this.set('manifests', manifests, {parent: 'currentConfig'});
+      });
+&nbsp;
+      _this.eventEmitter.subscribe("slotsUpdated", function(event, options) {
+        _this.slots = options.slots;
+      });
+&nbsp;
+      _this.eventEmitter.subscribe("layoutChanged", function(event, layoutDescription) {
+        // string parents to prevent invalid circular representation.
+        var serialisedLayout = JSON.stringify(layoutDescription, function(key, value) {
+          if (key === 'parent') return undefined;
+          return value;
+        });
+        _this.set('layout', serialisedLayout, {parent: "currentConfig"} );
+      });
+&nbsp;
+      _this.eventEmitter.subscribe("windowSlotAdded", function(event, options) {
+        var windowObjects = _this.currentConfig.windowObjects,
+        inArray = jQuery.grep(windowObjects, <span class="fstat-no" title="function not covered" >function(windowObj) {</span>
+<span class="cstat-no" title="statement not covered" >          return windowObj.id === options.id;</span>
+        });
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (inArray.length === 0) {
+          windowObjects.push({
+            'id' : options.id,
+            'slotAddress': options.slotAddress
+          });
+          _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );
+        }
+      });
+&nbsp;
+        _this.eventEmitter.subscribe("windowsRemoved", <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >          _this.set("windowObjects", [], {parent: "currentConfig"} );</span>
+        });
+&nbsp;
+      _this.eventEmitter.subscribe("windowRemoved", function(event, windowID) {
+        var windowObjects = jQuery.grep(_this.currentConfig.windowObjects, function(window, index) {
+          return window.id !== windowID;
+        });
+        _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );
+      });
+&nbsp;
+&nbsp;
+      _this.eventEmitter.subscribe('DELETE_FROM_CONFIG', <span class="fstat-no" title="function not covered" >function(event, options) {</span>
+<span class="cstat-no" title="statement not covered" >        var windowObjects = jQuery.grep(_this.currentConfig.windowObjects, <span class="fstat-no" title="function not covered" >function(window, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >          return window.loadedManifest !== options.loadedManifest || window.id;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        _this.set("windowObjects", windowObjects, {parent: "currentConfig"} );</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('etc...', <span class="fstat-no" title="function not covered" >function(junk) {</span>
+        // handle adding the property in the appropriate place
+        // in this.currentConfig by passing to the _this.set(),
+        // which "saves" to localstore as a side effect.
+&nbsp;
+      });
+&nbsp;
+      // We could have simply listened to the 'set' event that
+      // would have been emitted by objects when their models were
+      // updated and sent the results to a parser function that
+      // would extract the calling object's properties in the config
+      // and updated them if they were different, but we can't
+      // currently do that the way the app is written, since we
+      // didn't actually follow that patttern almost anywhere.
+      //
+      // _this.eventEmitter.subscribe('set', function(junk) {
+      //  // 1.) send the junk to a parser function
+      //  // 2.) use this.set(parsedJunk) to update
+      //  // this.currentConfig, with the side effect of
+      //  // saving to localStorage.
+      //
+      // });
+&nbsp;
+      // you may need to bind another event here that responds to the
+      // user navigating history, for the purpose of popping the
+      // history entry back off.
+&nbsp;
+    },
+&nbsp;
+    save: function() {
+      var _this = this;
+&nbsp;
+      // the hash must be stringified because
+      // localStorage is a key:value store that
+      // only accepts strings.
+&nbsp;
+      localStorage.setItem(_this.sessionID, JSON.stringify(_this.currentConfig));
+    }
+&nbsp;
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

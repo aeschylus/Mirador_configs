@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/viewer/manifestListItem.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">src/viewer/manifestListItem.js</span></h1>
+    <h2>
+        Statements: <span class="metric">68.57% <small>(72 / 105)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">50% <small>(25 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">73.68% <small>(14 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">68.57% <small>(72 / 105)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/viewer/</a> &#187; manifestListItem.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.ManifestListItem = function(options) {
+&nbsp;
+    jQuery.extend(true, this, {
+      element:                    null,
+      appendTo:                   null,
+      manifest:                   null,
+      loadStatus:                 null,
+      thumbHeight:                80,
+      urlHeight:                  150,
+      resultsWidth:               0,  // based on screen width
+      maxPreviewImagesWidth:      0,
+      repoWidth:                  80,
+      metadataWidth:              450,
+      margin:                     15,
+      remainingWidth:             20,
+      imagesTotalWidth:           0,
+      tplData:                    null,
+      allImages:                  [],
+      remaining:                  0,
+      state:                      null,
+      eventEmitter:               null
+    }, options);
+&nbsp;
+    this.init();
+&nbsp;
+  };
+&nbsp;
+  $.ManifestListItem.prototype = {
+&nbsp;
+    init: function() {
+      var _this = this;
+      //need a better way of calculating this because JS can't get width and margin of hidden elements, so must manually set that info
+      //ultimately use 95% of space available, since sometimes it still displays too many images
+      this.maxPreviewImagesWidth = this.resultsWidth - (this.repoWidth + this.margin + this.metadataWidth + this.margin + this.remainingWidth);
+      this.maxPreviewImagesWidth = this.maxPreviewImagesWidth * 0.95;
+&nbsp;
+      $.Handlebars.registerHelper('pluralize', function(count, singular, plural) {
+        if (count === 1) {
+          return singular;
+        } else {
+          return plural;
+        }
+      });
+&nbsp;
+      this.fetchTplData(this.manifestId);
+&nbsp;
+      if (_this.state.getStateProperty('preserveManifestOrder')) {
+        if (this.appendTo.children().length === 0) {
+          this.element = jQuery(this.template(this.tplData)).prependTo(this.appendTo).hide().fadeIn('slow');
+        } else {
+          var liList = _this.appendTo.find('li');
+          jQuery.each(liList, function(index, item) {
+              var prev = parseFloat(jQuery(item).attr('data-index-number'));
+              var next = parseFloat(jQuery(liList[index+1]).attr('data-index-number'));
+              var current = _this.tplData.index;
+              if (current &lt;= prev &amp;&amp; (next &gt; current || <span class="branch-2 cbranch-no" title="branch not covered" >isNaN(next))</span> ) {
+                _this.element = jQuery(_this.template(_this.tplData)).insertBefore(jQuery(item)).hide().fadeIn('slow');
+                return false;
+              } else if (current &gt; prev &amp;&amp; (current &lt; next || isNaN(next))) {
+                _this.element = jQuery(_this.template(_this.tplData)).insertAfter(jQuery(item)).hide().fadeIn('slow');
+                return false;
+              }
+          });
+        }
+      } else {
+        this.element = jQuery(this.template(this.tplData)).prependTo(this.appendTo).hide().fadeIn('slow');
+      }
+&nbsp;
+      this.bindEvents();
+      this.listenForActions();
+    },
+&nbsp;
+    fetchTplData: function() {
+      var _this = this,
+      location = _this.manifest.location,
+      manifest = _this.manifest.jsonLd;
+&nbsp;
+      this.tplData = {
+        label: $.JsonLd.getTextValue(manifest.label),
+        repository: location,
+        canvasCount: manifest.sequences[0].canvases.length,
+        images: [],
+        index: _this.state.getManifestIndex(manifest['@id'])
+      };
+&nbsp;
+      this.tplData.repoImage = (function() {
+        var repo = _this.tplData.repository;
+        if (manifest.logo) {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof manifest.logo === "string")
+            return manifest.logo;
+<span class="cstat-no" title="statement not covered" >          if (typeof manifest.logo['@id'] !== 'undefined')</span>
+<span class="cstat-no" title="statement not covered" >            return manifest.logo['@id'];</span>
+        }
+        return '';
+      })();
+&nbsp;
+      for ( var i=0; i &lt; manifest.sequences[0].canvases.length; i++) {
+        var canvas = manifest.sequences[0].canvases[i];
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (canvas.width === 0) {
+<span class="cstat-no" title="statement not covered" >          continue;</span>
+        }
+&nbsp;
+        var aspectRatio = canvas.height/canvas.width,
+        width = (_this.thumbHeight/aspectRatio);
+        url = _this.manifest.getThumbnailForCanvas(canvas, width);
+&nbsp;
+        _this.allImages.push({
+          url: url,
+          width: width,
+          height: _this.thumbHeight,
+          id: canvas['@id'],
+          index: i
+        });
+      }
+&nbsp;
+      jQuery.each(_this.allImages, function(index, value) {
+        var width = value.width;
+&nbsp;
+        _this.imagesTotalWidth += (width + _this.margin);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_this.imagesTotalWidth &gt;= _this.maxPreviewImagesWidth) {
+          // outsized image will inherited
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (value.width &gt; _this.maxPreviewImagesWidth) {
+            _this.tplData.images.push(value);
+          }
+          _this.imagesTotalWidth -= (width + _this.margin);
+          return false;
+        }
+<span class="cstat-no" title="statement not covered" >        _this.tplData.images.push(value);</span>
+      });
+&nbsp;
+      _this.remaining = this.tplData.remaining = (function() {
+        var remaining = _this.allImages.length - _this.tplData.images.length;
+        if (remaining &gt; 0) {
+          return remaining;
+        }
+      })();
+&nbsp;
+    },
+&nbsp;
+    render: <span class="fstat-no" title="function not covered" >function() {</span>
+&nbsp;
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+&nbsp;
+      _this.eventEmitter.subscribe('manifestPanelWidthChanged', function(event, newWidth){
+        _this.updateDisplay(newWidth);
+      });
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+&nbsp;
+      this.element.find('img').on('load', <span class="fstat-no" title="function not covered" >function() {</span>
+        //if img width is not equal to the width in the html, change height
+<span class="cstat-no" title="statement not covered" >        jQuery(this).hide().fadeIn(600);</span>
+      });
+&nbsp;
+      this.element.on('click', function() {
+        var windowConfig = {
+          manifest: _this.manifest,
+          canvasID: null,
+          viewType: 'ThumbnailsView'
+        };
+        _this.eventEmitter.publish('ADD_WINDOW', windowConfig);
+      });
+&nbsp;
+      this.element.find('.preview-image').on('click', <span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >        e.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >        var windowConfig = {</span>
+          manifest: _this.manifest,
+          canvasID: jQuery(this).attr('data-image-id'),
+          viewType: _this.state.getStateProperty('windowSettings').viewType //get the view type from settings rather than always defaulting to ImageView
+        };
+<span class="cstat-no" title="statement not covered" >        _this.eventEmitter.publish('ADD_WINDOW', windowConfig);</span>
+      });
+    },
+&nbsp;
+    updateDisplay: function(newWidth) {
+        var _this = this,
+        newMaxPreviewWidth = newWidth - (_this.repoWidth + _this.margin + _this.metadataWidth + _this.margin + _this.remainingWidth);
+        newMaxPreviewWidth = newMaxPreviewWidth * 0.95;
+        var image = null;
+&nbsp;
+        //width of browser window has been made smaller
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (newMaxPreviewWidth &lt; _this.maxPreviewImagesWidth ) {
+<span class="cstat-no" title="statement not covered" >          while (_this.imagesTotalWidth &gt;= newMaxPreviewWidth) {</span>
+<span class="cstat-no" title="statement not covered" >            image = _this.tplData.images.pop();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (image) {</span>
+<span class="cstat-no" title="statement not covered" >              _this.imagesTotalWidth -= (image.width + _this.margin);</span>
+&nbsp;
+              //remove image from dom
+<span class="cstat-no" title="statement not covered" >              _this.element.find('img[data-image-id="'+image.id+'"]').remove();</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              break;</span>
+            }
+          }
+          //check if need to add ellipsis
+<span class="cstat-no" title="statement not covered" >          if (_this.remaining === 0 &amp;&amp; _this.allImages.length - _this.tplData.images.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >              _this.element.find('.preview-images').after('&lt;i class="fa fa fa-ellipsis-h remaining"&gt;&lt;/i&gt;');</span>
+          }
+<span class="cstat-no" title="statement not covered" >          _this.remaining = _this.allImages.length - _this.tplData.images.length;</span>
+&nbsp;
+        } else <span class="missing-if-branch" title="if path not taken" >I</span>if (newMaxPreviewWidth &gt; _this.maxPreviewImagesWidth) {
+          //width of browser window has been made larger
+<span class="cstat-no" title="statement not covered" >          var currentLastImage = _this.tplData.images[_this.tplData.images.length-1],</span>
+            index = currentLastImage ? currentLastImage.index+1 : 0;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          image = _this.allImages[index];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          if (image) {</span>
+<span class="cstat-no" title="statement not covered" >            while (_this.imagesTotalWidth + image.width + _this.margin &lt; newMaxPreviewWidth) {</span>
+<span class="cstat-no" title="statement not covered" >              _this.tplData.images.push(image);</span>
+<span class="cstat-no" title="statement not covered" >              _this.imagesTotalWidth += (image.width + _this.margin);</span>
+&nbsp;
+              //add image to dom
+<span class="cstat-no" title="statement not covered" >              _this.element.find('.preview-images').append('&lt;img src="'+image.url+'" width="'+image.width+'" height="'+image.height+'" class="preview-image flash" data-image-id="'+image.id+'"&gt;');</span>
+&nbsp;
+              //get next image
+<span class="cstat-no" title="statement not covered" >              index++;</span>
+<span class="cstat-no" title="statement not covered" >              image = _this.allImages[index];</span>
+<span class="cstat-no" title="statement not covered" >              if (!image) {</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+              }
+            }
+            //check if need to remove ellipsis
+<span class="cstat-no" title="statement not covered" >          if (_this.remaining &gt; 0 &amp;&amp; _this.allImages.length - _this.tplData.images.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.element.find('.remaining').remove();</span>
+          }
+<span class="cstat-no" title="statement not covered" >          _this.remaining = _this.allImages.length - _this.tplData.images.length;</span>
+          }
+        }
+        _this.maxPreviewImagesWidth = newMaxPreviewWidth;
+        _this.eventEmitter.publish('manifestListItemRendered');
+    },
+&nbsp;
+    hide: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+    },
+&nbsp;
+    show: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+    },
+&nbsp;
+    template: $.Handlebars.compile([
+      '&lt;li data-index-number={{index}}&gt;',
+      '&lt;div class="repo-image"&gt;',
+        '{{#if repoImage}}',
+        '&lt;img src="{{repoImage}}" alt="repoImg"&gt;',
+        '{{else}}',
+        '&lt;span class="default-logo"&gt;&lt;/span&gt;',
+        '{{/if}}',
+      '&lt;/div&gt;',
+      '&lt;div class="select-metadata"&gt;',
+        '&lt;div class="manifest-title"&gt;',
+          '&lt;h3 title="{{{label}}}"&gt;{{{label}}}&lt;/h3&gt;',
+        '&lt;/div&gt;',
+        '&lt;div class="item-info"&gt;',
+          '&lt;div class="item-info-row"&gt;',
+            '{{#if repository}}',
+              '&lt;div class="repo-label"&gt;{{repository}}&lt;/div&gt;',
+            '{{/if}}',
+            '&lt;div class="canvas-count"&gt;{{canvasCount}} {{pluralize canvasCount (t "item") (t "items")}}&lt;/div&gt;',
+          '&lt;/div&gt;',
+        '&lt;/div&gt;',
+      '&lt;/div&gt;',
+      '&lt;div class="preview-thumb"&gt;',
+        '&lt;div class="preview-images"&gt;',
+        '{{#each images}}',
+          '&lt;img src="{{url}}" width="{{width}}" height="{{height}}" class="preview-image flash" data-image-id="{{id}}"&gt;',
+        '{{/each}}',
+        '&lt;/div&gt;',
+        '{{#if remaining}}',
+          '&lt;i class="fa fa fa-ellipsis-h remaining"&gt;&lt;/i&gt;',
+        '{{/if}}',
+      '&lt;/div&gt;',
+      '&lt;/li&gt;'
+    ].join(''))
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

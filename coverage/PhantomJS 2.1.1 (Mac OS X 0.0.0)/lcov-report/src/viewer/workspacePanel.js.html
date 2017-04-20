@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/viewer/workspacePanel.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/viewer/workspacePanel.js</span></h1>
+    <h2>
+        Statements: <span class="metric">98.08% <small>(51 / 52)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(4 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">94.74% <small>(18 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">98% <small>(49 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/viewer/</a> &#187; workspacePanel.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-yes">205</span>
+<span class="cline-any cline-yes">205</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.WorkspacePanel = function(options) {
+&nbsp;
+    jQuery.extend(true, this, {
+      element: null,
+      appendTo: null,
+      workspace: null,
+      state: null,
+      eventEmitter: null
+    }, options);
+&nbsp;
+    this.init();
+&nbsp;
+  };
+&nbsp;
+  $.WorkspacePanel.prototype = {
+    init: function () {
+      var _this = this,
+      templateData = {
+        rows: $.layoutDescriptionFromGridString(_this.state.getStateProperty('workspacePanelSettings').maxColumns + 'x' + _this.state.getStateProperty('workspacePanelSettings').maxRows).children.map(function(column, rowIndex) {
+          column.columns = column.children.map(function(row, columnIndex) {
+            row.gridString = (rowIndex+1) + 'x' + (columnIndex+1);
+            return row;
+          });
+          return column;
+        })
+      };
+&nbsp;
+      this.element = jQuery(this.template(templateData)).appendTo(this.appendTo);
+      var backgroundImage = _this.state.getStateProperty('buildPath') + _this.state.getStateProperty('imagesPath') + 'debut_dark.png';
+      this.element.css('background-image','url('+backgroundImage+')').css('background-repeat','repeat');
+      
+      this.bindEvents();
+      this.listenForActions();
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+      _this.eventEmitter.subscribe('workspacePanelVisible.set', function(_, stateValue) {
+        _this.onPanelVisible(_, stateValue);
+      });
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+&nbsp;
+      _this.element.find('.grid-item').on('click', function() {
+        var gridString = jQuery(this).data('gridstring');
+        _this.select(gridString);
+      });
+&nbsp;
+      _this.element.find('.grid-item').on('mouseover', function() {
+        var gridString = jQuery(this).data('gridstring');
+        _this.hover(gridString);
+      });
+      
+      _this.element.find('.select-grid').on('mouseout', function() {
+        _this.reset();
+      });
+    },
+&nbsp;
+    select: function(gridString) {
+      var _this = this;
+      var layoutDescription = $.layoutDescriptionFromGridString(gridString);
+      _this.eventEmitter.publish('RESET_WORKSPACE_LAYOUT', {layoutDescription: layoutDescription});
+      _this.eventEmitter.publish('TOGGLE_WORKSPACE_PANEL');
+    },
+&nbsp;
+    hover: function(gridString) {
+      var _this = this,
+      highestRow = gridString.charAt(0),
+      highestColumn = gridString.charAt(2),
+      gridItems = _this.element.find('.grid-item');
+      gridItems.removeClass('hovered');
+      gridItems.filter(function(index) {
+        var gridString = jQuery(this).data('gridstring');
+        var change = gridString.charAt(0) &lt;= highestRow &amp;&amp; gridString.charAt(2) &lt;= highestColumn;
+        return change;
+      }).addClass('hovered');
+      _this.element.find('.grid-instructions').hide();
+      _this.element.find('.grid-text').text(gridString).show();
+    },
+    
+    reset: function() {
+      var _this = this;
+      _this.element.find('.grid-item').removeClass('hovered');
+      _this.element.find('.grid-instructions').show();
+      _this.element.find('.grid-text').hide();
+    },
+&nbsp;
+    hide: function() {
+      jQuery(this.element).hide({effect: "fade", duration: 160, easing: "easeOutCubic"});
+    },
+&nbsp;
+    show: function() {
+      var onComplete = <span class="fstat-no" title="function not covered" >function () {</span>
+        // Under firefox $.show() used under display:none iframe does not change the display.
+        // This is workaround for https://github.com/IIIF/mirador/issues/929
+<span class="cstat-no" title="statement not covered" >        jQuery(this).css('display', 'block');</span>
+      };
+&nbsp;
+      jQuery(this.element).show({
+        effect: "fade", duration: 160, easing: "easeInCubic", complete: onComplete
+      });
+    },
+&nbsp;
+    onPanelVisible: function(_, stateValue) {
+      var _this = this;
+      if (stateValue) { _this.show(); return; }
+      _this.hide();
+    },
+&nbsp;
+    template: $.Handlebars.compile([
+                                 '&lt;div id="workspace-select-menu"&gt;',
+                                 '&lt;h1&gt;{{t "changeLayout"}}&lt;/h1&gt;',
+                                 '&lt;h3 class="grid-text"&gt;&lt;/h3&gt;',
+                                 '&lt;h3 class="grid-instructions"&gt;{{t "selectGrid"}}&lt;/h3&gt;',
+                                 '&lt;div class="select-grid"&gt;',
+                                 '{{#each rows}}',
+                                 '&lt;div class="grid-row"&gt;',
+                                   '{{#each columns}}',
+                                   '&lt;a class="grid-item" data-gridString="{{gridString}}"&gt;',
+                                   '&lt;div class="grid-icon"&gt;&lt;/div&gt;',
+                                   '&lt;/a&gt;',
+                                   '{{/each}}',
+                                 '&lt;/div&gt;',
+                                 '{{/each}}',
+                                 '&lt;/div&gt;',
+                                 // '&lt;div class="preview-container"&gt;',
+                                 // '&lt;/div&gt;',
+                                 '&lt;/div&gt;'
+    ].join(''))
+  };
+&nbsp;
+}(Mirador));
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

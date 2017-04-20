@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/annotations/osd-region-draw-tool.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/annotations/osd-region-draw-tool.js</span></h1>
+    <h2>
+        Statements: <span class="metric">32.37% <small>(45 / 139)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">10% <small>(5 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">26.67% <small>(8 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">32.37% <small>(45 / 139)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/annotations/</a> &#187; osd-region-draw-tool.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+  $.OsdRegionDrawTool = function(options) {
+    jQuery.extend(this, {
+      osdViewer: null,
+      parent: null,
+      osd: null,
+      list: null,
+      annotationsToShapesMap: {},
+      eventEmitter: null
+    }, options);
+&nbsp;
+    this.eventsSubscriptions = [];
+&nbsp;
+    this.init();
+  };
+&nbsp;
+  $.OsdRegionDrawTool.prototype = {
+&nbsp;
+    init: function() {
+      this.svgOverlay = this.osdViewer.svgOverlay(this.osdViewer.id, this.windowId, this.state, this.eventEmitter);
+      this.svgOverlay.show();
+      this.svgOverlay.disable();
+&nbsp;
+      this.listenForActions();
+    },
+&nbsp;
+    enterDisplayAnnotations: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.setMouseTool();</span>
+&nbsp;
+      // if a user selected the pointer mode but is still actively
+      // working on an annotation, don't re-render
+<span class="cstat-no" title="statement not covered" >      if (!this.svgOverlay.inEditOrCreateMode) {</span>
+<span class="cstat-no" title="statement not covered" >        this.exitEditMode(true);</span>
+<span class="cstat-no" title="statement not covered" >        this.render();</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.checkToRemoveFocus();</span>
+      }
+    },
+&nbsp;
+    enterCreateAnnotation: <span class="fstat-no" title="function not covered" >function() {</span>
+      // if a user selected went from pointer to a shape but is still actively
+      // working on an annotation, don't re-render
+<span class="cstat-no" title="statement not covered" >      if (!this.svgOverlay.inEditOrCreateMode) {</span>
+<span class="cstat-no" title="statement not covered" >        this.osdViewer.setMouseNavEnabled(false);</span>
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.show();</span>
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.enable();</span>
+<span class="cstat-no" title="statement not covered" >        this.render();</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.checkToRemoveFocus();</span>
+      }
+    },
+&nbsp;
+    enterCreateShape: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      if (!this.svgOverlay.inEditOrCreateMode) {</span>
+<span class="cstat-no" title="statement not covered" >        this.osdViewer.setMouseNavEnabled(false);</span>
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.show();</span>
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.enable();</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.checkToRemoveFocus();</span>
+      }
+    },
+&nbsp;
+    enterEditAnnotation: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.osdViewer.setMouseNavEnabled(false);</span>
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.show();</span>
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.enableEdit();</span>
+    },
+&nbsp;
+    enterDefault: <span class="fstat-no" title="function not covered" >function() {</span>
+      // Removing the Tool explicitly because otherwise mouse events keep
+      // firing in default mode where they shouldn't.
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.removeMouseTool();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.exitEditMode(false);</span>
+    },
+&nbsp;
+    exitEditMode: <span class="fstat-no" title="function not covered" >function(showAnnotations) {</span>
+<span class="cstat-no" title="statement not covered" >      this.osdViewer.setMouseNavEnabled(true);</span>
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.disable();</span>
+<span class="cstat-no" title="statement not covered" >      if (showAnnotations) {</span>
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.show();</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.svgOverlay.hide();</span>
+      }
+    },
+&nbsp;
+    render: function () {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(this.parent.mode !== $.AnnotationsLayer.DISPLAY_ANNOTATIONS){
+<span class="cstat-no" title="statement not covered" >        return ;</span>
+      }
+      this.svgOverlay.restoreEditedShapes();
+      this.svgOverlay.paperScope.activate();
+      this.svgOverlay.paperScope.project.clear();
+      var _this = this;
+      _this.annotationsToShapesMap = {};
+      var strategies = [
+        new $.Mirador21Strategy(),
+        new $.LegacyOpenAnnotationStrategy(),
+        new $.MiradorLegacyStrategy(),
+        new $.MiradorDualStrategy()
+      ];
+&nbsp;
+      for (var i = 0; i &lt; this.list.length; i++) {
+        var annotation = this.list[i];
+        try {
+          var shapeArray = this.prepareShapeArray(annotation, strategies);
+<span class="cstat-no" title="statement not covered" >          if (shapeArray.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.svgOverlay.restoreLastView(shapeArray);</span>
+<span class="cstat-no" title="statement not covered" >            _this.annotationsToShapesMap[annotation['@id']] = shapeArray;</span>
+          }
+        } catch(e) {
+          console.log('ERROR OsdRegionDrawTool#render anno:', annotation, 'error:', e);
+        }
+      }
+&nbsp;
+      var windowElement = _this.state.getWindowElement(_this.windowId);
+      this.annoTooltip = new $.AnnotationTooltip({
+        targetElement: jQuery(this.osdViewer.element),
+        state: _this.state,
+        eventEmitter: _this.eventEmitter,
+        windowId: _this.windowId
+      });
+      this.annoTooltip.initializeViewerUpgradableToEditor({
+        container: windowElement,
+        viewport: windowElement,
+        getAnnoFromRegion: _this.getAnnoFromRegion.bind(this)
+      });
+      this.svgOverlay.paperScope.view.draw();
+      _this.eventEmitter.publish('annotationsRendered.' + _this.windowId);
+    },
+&nbsp;
+    prepareShapeArray: function(annotation, strategies) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof annotation === 'object' &amp;&amp; annotation.on) {
+        for (var i = 0; i &lt; strategies.length; i++) {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (strategies[i].isThisType(annotation)) {
+            shapeArray = strategies[i].parseRegion(annotation, this);
+<span class="cstat-no" title="statement not covered" >            return shapeArray;</span>
+          }
+        }
+      }
+<span class="cstat-no" title="statement not covered" >      return [];</span>
+    },
+&nbsp;
+    parseRectangle: <span class="fstat-no" title="function not covered" >function(rectString, annotation) {</span>
+<span class="cstat-no" title="statement not covered" >      var shapeArray = rectString.split('=')[1].split(','),</span>
+      shape = {
+        'x': parseInt(shapeArray[0]),
+        'y': parseInt(shapeArray[1]),
+        'width': parseInt(shapeArray[2]),
+        'height': parseInt(shapeArray[3])
+      };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return this.svgOverlay.createRectangle(shape, annotation);</span>
+    },
+&nbsp;
+    showTooltipsFromMousePosition: <span class="fstat-no" title="function not covered" >function(event, location, absoluteLocation) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >      var hitOptions = {</span>
+        fill: true,
+        stroke: true,
+        segments: true
+      };
+<span class="cstat-no" title="statement not covered" >      var hoverColor = this.state.getStateProperty('drawingToolsSettings').hoverColor;</span>
+<span class="cstat-no" title="statement not covered" >      var annotations = [];</span>
+<span class="cstat-no" title="statement not covered" >      for (var key in _this.annotationsToShapesMap) {</span>
+<span class="cstat-no" title="statement not covered" >        if (_this.annotationsToShapesMap.hasOwnProperty(key)) {</span>
+<span class="cstat-no" title="statement not covered" >          var shapeArray = _this.annotationsToShapesMap[key];</span>
+<span class="cstat-no" title="statement not covered" >          for (var idx = 0; idx &lt; shapeArray.length; idx++) {</span>
+<span class="cstat-no" title="statement not covered" >            var shapeTool = this.svgOverlay.getTool(shapeArray[idx]);</span>
+<span class="cstat-no" title="statement not covered" >            var hoverWidth = shapeArray[idx].data.strokeWidth / this.svgOverlay.paperScope.view.zoom;</span>
+<span class="cstat-no" title="statement not covered" >            if (shapeArray[idx].hitTest(location, hitOptions)) {</span>
+<span class="cstat-no" title="statement not covered" >              annotations.push(shapeArray[idx].data.annotation);</span>
+<span class="cstat-no" title="statement not covered" >              if(shapeTool.onHover){</span>
+<span class="cstat-no" title="statement not covered" >                for(var k=0;k&lt;shapeArray.length;k++){</span>
+<span class="cstat-no" title="statement not covered" >                  shapeTool.onHover(true,shapeArray[k],hoverWidth,hoverColor);</span>
+                }
+              }
+<span class="cstat-no" title="statement not covered" >              break;</span>
+            }else{
+<span class="cstat-no" title="statement not covered" >              if(shapeTool.onHover){</span>
+<span class="cstat-no" title="statement not covered" >                shapeTool.onHover(false,shapeArray[idx],hoverWidth);</span>
+              }
+            }
+          }
+        }
+      }
+<span class="cstat-no" title="statement not covered" >      this.svgOverlay.paperScope.view.draw();</span>
+      //if (_this.svgOverlay.availableExternalCommentsPanel) {
+     //   _this.eventEmitter.publish('annotationMousePosition.' + _this.windowId, [annotations]);
+      //  return;
+      //}
+<span class="cstat-no" title="statement not covered" >      _this.annoTooltip.showViewer({</span>
+        annotations: annotations,
+        triggerEvent: event,
+        shouldDisplayTooltip: <span class="fstat-no" title="function not covered" >function(api) {</span>
+          //track whether the cursor is within the tooltip (with the specified tolerance) and disables show/hide/update functionality.
+<span class="cstat-no" title="statement not covered" >          if (api.elements.tooltip) {</span>
+<span class="cstat-no" title="statement not covered" >            var cursorWithinTooltip = true;</span>
+<span class="cstat-no" title="statement not covered" >            var leftSide = api.elements.tooltip.offset().left - _this.svgOverlay.hitOptions.tolerance;</span>
+<span class="cstat-no" title="statement not covered" >            var rightSide = api.elements.tooltip.offset().left + api.elements.tooltip.width() + _this.svgOverlay.hitOptions.tolerance;</span>
+<span class="cstat-no" title="statement not covered" >            if (absoluteLocation.x &lt; leftSide || rightSide &lt; absoluteLocation.x) {</span>
+<span class="cstat-no" title="statement not covered" >              cursorWithinTooltip = false;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var topSide = api.elements.tooltip.offset().top - _this.svgOverlay.hitOptions.tolerance;</span>
+<span class="cstat-no" title="statement not covered" >            var bottomSide = api.elements.tooltip.offset().top + api.elements.tooltip.height() + _this.svgOverlay.hitOptions.tolerance;</span>
+<span class="cstat-no" title="statement not covered" >            if (absoluteLocation.y &lt; topSide || bottomSide &lt; absoluteLocation.y) {</span>
+<span class="cstat-no" title="statement not covered" >              cursorWithinTooltip = false;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return !cursorWithinTooltip;</span>
+          }
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        }
+      });
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+&nbsp;
+      this._thisDestroy = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >        _this.destroy();</span>
+      };
+&nbsp;
+      _this.osdViewer.addHandler('close', this._thisDestroy);
+&nbsp;
+      this.eventsSubscriptions.push(this.eventEmitter.subscribe('DESTROY_EVENTS.'+this.windowId, <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.destroy();</span>
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('updateTooltips.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, location, absoluteLocation) {</span>
+<span class="cstat-no" title="statement not covered" >        if (_this.annoTooltip &amp;&amp; !_this.annoTooltip.inEditOrCreateMode) {</span>
+<span class="cstat-no" title="statement not covered" >          _this.showTooltipsFromMousePosition(event, location, absoluteLocation);</span>
+        }
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('removeTooltips.' + _this.windowId, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        jQuery(_this.osdViewer.element).qtip('destroy', true);</span>
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('disableTooltips.' + _this.windowId, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        if (_this.annoTooltip) {</span>
+<span class="cstat-no" title="statement not covered" >          _this.annoTooltip.inEditOrCreateMode = true;</span>
+        }
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('enableTooltips.' + _this.windowId, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        if (_this.annoTooltip) {</span>
+<span class="cstat-no" title="statement not covered" >          _this.annoTooltip.inEditOrCreateMode = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        _this.svgOverlay.restoreDraftShapes();</span>
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('SET_ANNOTATION_EDITING.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, options) {</span>
+<span class="cstat-no" title="statement not covered" >        jQuery.each(_this.annotationsToShapesMap, <span class="fstat-no" title="function not covered" >function(key, paths) {</span></span>
+          // if we have a matching annotationId, pass the boolean value on for each path, otherwise, always pass false
+<span class="cstat-no" title="statement not covered" >          if (key === options.annotationId) {</span>
+<span class="cstat-no" title="statement not covered" >            if (options.isEditable) {</span>
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.publish('SET_OVERLAY_TOOLTIP.' + _this.windowId, {"tooltip" : options.tooltip, "visible" : true, "paths" : paths});</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >              _this.eventEmitter.publish('SET_OVERLAY_TOOLTIP.' + _this.windowId, {"tooltip" : null, "visible" : false, "paths" : []});</span>
+            }
+<span class="cstat-no" title="statement not covered" >            jQuery.each(paths, <span class="fstat-no" title="function not covered" >function(index, path) {</span></span>
+<span class="cstat-no" title="statement not covered" >              path.data.editable = options.isEditable;</span>
+<span class="cstat-no" title="statement not covered" >              if (options.isEditable) {</span>
+<span class="cstat-no" title="statement not covered" >                path.strokeWidth = (path.data.strokeWidth + 5) / _this.svgOverlay.paperScope.view.zoom;</span>
+              } else {
+<span class="cstat-no" title="statement not covered" >                path.strokeWidth = path.data.strokeWidth / _this.svgOverlay.paperScope.view.zoom;</span>
+              }
+              //just in case, force the shape to be non hovered
+<span class="cstat-no" title="statement not covered" >              var tool = _this.svgOverlay.getTool(path);</span>
+<span class="cstat-no" title="statement not covered" >              tool.onHover(false, path, path.strokeWidth);</span>
+            });
+          } else {
+<span class="cstat-no" title="statement not covered" >            jQuery.each(paths, <span class="fstat-no" title="function not covered" >function(index, path) {</span></span>
+<span class="cstat-no" title="statement not covered" >              path.data.editable = false;</span>
+            });
+          }
+        });
+<span class="cstat-no" title="statement not covered" >        _this.svgOverlay.paperScope.view.draw();</span>
+      }));
+&nbsp;
+      this.eventsSubscriptions.push(_this.eventEmitter.subscribe('refreshOverlay.' + _this.windowId, <span class="fstat-no" title="function not covered" >function (event) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.render();</span>
+      }));
+    },
+&nbsp;
+    getAnnoFromRegion: <span class="fstat-no" title="function not covered" >function(regionId) {</span>
+<span class="cstat-no" title="statement not covered" >      return this.list.filter(<span class="fstat-no" title="function not covered" >function(annotation) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return annotation['@id'] === regionId;</span>
+      });
+    },
+&nbsp;
+    destroy: function () {
+      var _this = this;
+      this.eventsSubscriptions.forEach(function(event){
+        _this.eventEmitter.unsubscribe(event.name,event.handler);
+      });
+      this.osdViewer.removeHandler('close', this._thisDestroy);
+    }
+&nbsp;
+  };
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

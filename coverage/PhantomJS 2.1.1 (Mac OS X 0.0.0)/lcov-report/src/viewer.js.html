@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/viewer.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">src/viewer.js</span></h1>
+    <h2>
+        Statements: <span class="metric">67.77% <small>(82 / 121)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">47.06% <small>(32 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">58.33% <small>(21 / 36)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">67.5% <small>(81 / 120)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; viewer.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1031</span>
+<span class="cline-any cline-yes">1031</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.Viewer = function(options) {
+    jQuery.extend(true, this, {
+      id:                     null,
+      data:                   null,
+      element:                null,
+      canvas:                 null,
+      workspaceType:          null,
+      layout:                 null,
+      workspace:              null,
+      mainMenu:               null,
+      workspaceAutoSave:      null,
+      windowSize:             {},
+      resizeRatio:            {},
+      currentWorkspaceVisible: true,
+      state:                  null,
+      eventEmitter:           null,
+      overlayStates:          {
+        'workspacePanelVisible': false,
+        'manifestsPanelVisible': false,
+        'optionsPanelVisible': false,
+        'bookmarkPanelVisible': false
+      },
+      manifests:             []
+    }, options);
+&nbsp;
+    this.id = this.state.getStateProperty('id');
+    this.data = this.state.getStateProperty('data');
+    // get initial manifests
+    this.element = this.element || jQuery('#' + this.id);
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (options.availableAnnotationDrawingTools &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >options.availableAnnotationDrawingTools.length &gt; 0)</span> {
+<span class="cstat-no" title="statement not covered" >      this.availableAnnotationDrawingTools = options.availableAnnotationDrawingTools;</span>
+    }
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.data) {
+      this.init();
+    }
+  };
+&nbsp;
+  $.Viewer.prototype = {
+&nbsp;
+    init: function() {
+      var _this = this;
+&nbsp;
+      //initialize i18next
+      i18next.use(i18nextXHRBackend).use(i18nextBrowserLanguageDetector).init({
+        fallbackLng: 'en',
+        load: 'unspecific',
+        debug: false,
+        backend: {
+          loadPath: _this.state.getStateProperty('buildPath') + _this.state.getStateProperty('i18nPath')+'{{lng}}/{{ns}}.json'
+        }
+      }, _this.setupViewer.bind(_this));
+      // because this is a callback, we need to bind "_this" to explicitly retain the calling context of this function (the viewer object instance));
+    },
+&nbsp;
+    setupViewer: function() {
+      var _this = this;
+      //add background and positioning information on the root element that is provided in config
+      var backgroundImage = _this.state.getStateProperty('buildPath') + _this.state.getStateProperty('imagesPath') + 'debut_dark.png';
+      this.element.css('background-color', '#333').css('background-image','url('+backgroundImage+')').css('background-position','left top')
+      .css('background-repeat','repeat');
+&nbsp;
+      //register $.Handlebars helper
+      $.Handlebars.registerHelper('t', function(i18n_key) {
+        var result = i18next.t(i18n_key);
+        return new $.Handlebars.SafeString(result);
+      });
+&nbsp;
+      //check all buttons in mainMenu.  If they are all set to false, then don't show mainMenu
+      var showMainMenu = false;
+      jQuery.each(this.state.getStateProperty('mainMenuSettings').buttons, function(key, value) {
+        if (value) { showMainMenu = true; }
+      });
+      // but, mainMenu should be displayed if we have userButtons and/or userLogo defined
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.getStateProperty('mainMenuSettings').userButtons &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.getStateProperty('mainMenuSettings').userButtons.length &gt; 0)</span> {
+<span class="cstat-no" title="statement not covered" >        showMainMenu = true;</span>
+      }
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.getStateProperty('mainMenuSettings').userLogo &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!jQuery.isEmptyObject(this.state.getStateProperty('mainMenuSettings').userLogo))</span> {
+<span class="cstat-no" title="statement not covered" >        showMainMenu = true;</span>
+      }
+&nbsp;
+      //even if all these buttons are available, developer can override and set show to false,
+      //in which case, don't show mainMenu at all
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.getStateProperty('mainMenuSettings').show === false) {
+<span class="cstat-no" title="statement not covered" >        showMainMenu = false;</span>
+      }
+&nbsp;
+      // add main menu
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (showMainMenu) {
+        this.mainMenu = new $.MainMenu({ appendTo: this.element, state: this.state, eventEmitter: this.eventEmitter });
+        this.eventEmitter.publish('mainMenuInitialized');
+      }
+&nbsp;
+      // add viewer area
+      this.canvas = jQuery('&lt;div/&gt;')
+      .addClass('mirador-viewer')
+      .appendTo(this.element);
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!showMainMenu) {
+<span class="cstat-no" title="statement not covered" >        this.canvas.css("top", "0px");</span>
+      }
+&nbsp;
+      // add workspace configuration
+      this.layout = typeof this.state.getStateProperty('layout') !== 'string' ? <span class="branch-0 cbranch-no" title="branch not covered" >JSON.stringify(this.state.getStateProperty('layout')) </span>: this.state.getStateProperty('layout');
+      this.workspace = new $.Workspace({
+        layoutDescription: this.layout.charAt(0) === '{' ? <span class="branch-0 cbranch-no" title="branch not covered" >JSON.parse(this.layout) </span>: $.layoutDescriptionFromGridString(this.layout),
+        appendTo: this.element.find('.mirador-viewer'),
+        state: this.state,
+        eventEmitter: this.eventEmitter
+      });
+&nbsp;
+      this.workspacePanel = new $.WorkspacePanel({
+        appendTo: this.element.find('.mirador-viewer'),
+        state: this.state,
+        eventEmitter: this.eventEmitter
+      });
+&nbsp;
+      this.manifestsPanel = new $.ManifestsPanel({ appendTo: this.element.find('.mirador-viewer'), state: this.state, eventEmitter: this.eventEmitter });
+      //only instatiate bookmarkPanel if we need it
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (showMainMenu &amp;&amp; this.state.getStateProperty('mainMenuSettings').buttons.bookmark) {
+<span class="cstat-no" title="statement not covered" >        this.bookmarkPanel = new $.BookmarkPanel({ appendTo: this.element.find('.mirador-viewer'), state: this.state, eventEmitter: this.eventEmitter });</span>
+      }
+&nbsp;
+      // set this to be displayed
+      this.set('currentWorkspaceVisible', true);
+&nbsp;
+      this.bindEvents();
+      this.listenForActions();
+      // retrieve manifests
+      this.getManifestsData();
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.state.getStateProperty('windowObjects').length === 0 &amp;&amp; this.state.getStateProperty('openManifestsPage')) {
+<span class="cstat-no" title="statement not covered" >        this.workspace.slots[0].addItem();</span>
+      }
+    },
+&nbsp;
+    listenForActions: function() {
+      var _this = this;
+&nbsp;
+      // check that windows are loading first to set state of slot?
+      _this.eventEmitter.subscribe('manifestReceived', function(event, newManifest) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (_this.state.getStateProperty('windowObjects')) {
+          var check = jQuery.grep(_this.state.getStateProperty('windowObjects'), <span class="fstat-no" title="function not covered" >function(object, index) {</span>
+<span class="cstat-no" title="statement not covered" >            return object.loadedManifest === newManifest.uri;</span>
+          });
+          jQuery.each(check, <span class="fstat-no" title="function not covered" >function(index, config) {</span>
+<span class="cstat-no" title="statement not covered" >            _this.loadManifestFromConfig(config);</span>
+          });
+        }
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('TOGGLE_WORKSPACE_PANEL', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.toggleWorkspacePanel();</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('TOGGLE_BOOKMARK_PANEL', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.toggleBookmarkPanel();</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('TOGGLE_FULLSCREEN', <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        if ($.fullscreenElement()) {</span>
+<span class="cstat-no" title="statement not covered" >          $.exitFullscreen();</span>
+          //enable any window-specific fullscreen buttons
+<span class="cstat-no" title="statement not covered" >          _this.eventEmitter.publish('ENABLE_WINDOW_FULLSCREEN');</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          $.enterFullscreen(_this.element[0]);</span>
+          //disable any window-specific fullscreen buttons
+<span class="cstat-no" title="statement not covered" >          _this.eventEmitter.publish('DISABLE_WINDOW_FULLSCREEN');</span>
+        }
+      });
+&nbsp;
+      jQuery(document).on("webkitfullscreenchange mozfullscreenchange fullscreenchange", <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        _this.eventEmitter.publish('MAINMENU_FULLSCREEN_BUTTON');</span>
+        // in case the user clicked ESC instead of clicking on the toggle fullscreen button, reenable the window fullscreen button
+<span class="cstat-no" title="statement not covered" >        if (!$.fullscreenElement()) {</span>
+<span class="cstat-no" title="statement not covered" >          _this.eventEmitter.publish('ENABLE_WINDOW_FULLSCREEN');</span>
+        }
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('TOGGLE_LOAD_WINDOW', function(event) {
+        _this.toggleLoadWindow();
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('ADD_MANIFEST_FROM_URL', <span class="fstat-no" title="function not covered" >function(event, url, location) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.addManifestFromUrl(url, location);</span>
+      });
+&nbsp;
+      _this.eventEmitter.subscribe('TOGGLE_OVERLAYS_FALSE', function(event) {
+        jQuery.each(_this.overlayStates, function(oState, value) {
+          // toggles the other top-level panels closed and focuses the
+          // workspace. For instance, after selecting an object from the
+          // manifestPanel.
+          _this.set(oState, false, {parent: 'overlayStates'});
+        });
+      });
+&nbsp;
+    },
+&nbsp;
+    bindEvents: function() {
+      var _this = this;
+    },
+&nbsp;
+    get: function(prop, parent) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (parent) {
+        return this[parent][prop];
+      }
+<span class="cstat-no" title="statement not covered" >      return this[prop];</span>
+    },
+&nbsp;
+    set: function(prop, value, options) {
+      var _this = this;
+      if (options) {
+        this[options.parent][prop] = value;
+      } else {
+        this[prop] = value;
+      }
+      _this.eventEmitter.publish(prop + '.set', value);
+    },
+&nbsp;
+    // Sets state of overlays that layer over the UI state
+    toggleOverlay: function(state) {
+      var _this = this;
+      // first confirm all others are off
+      jQuery.each(this.overlayStates, function(oState, value) {
+        if (state !== oState) {
+          _this.set(oState, false, {parent: 'overlayStates'});
+        }
+      });
+      var currentState = this.get(state, 'overlayStates');
+      this.set(state, !currentState, {parent: 'overlayStates'});
+    },
+&nbsp;
+    toggleLoadWindow: function() {
+      this.toggleOverlay('manifestsPanelVisible');
+    },
+&nbsp;
+    toggleWorkspacePanel: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.toggleOverlay('workspacePanelVisible');</span>
+    },
+&nbsp;
+    toggleBookmarkPanel: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      this.toggleOverlay('bookmarkPanelVisible');</span>
+    },
+&nbsp;
+    getManifestsData: function() {
+      var _this = this;
+&nbsp;
+      _this.data.forEach(function(manifest) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (manifest.hasOwnProperty('manifestContent')) {
+<span class="cstat-no" title="statement not covered" >          var content = manifest.manifestContent;</span>
+<span class="cstat-no" title="statement not covered" >          _this.addManifestFromUrl(content['@id'], manifest.location ? manifest.location : '', content);</span>
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (manifest.hasOwnProperty('manifestUri')) {
+          var url = manifest.manifestUri;
+          _this.addManifestFromUrl(url, manifest.location ? manifest.location : <span class="branch-1 cbranch-no" title="branch not covered" >'',</span> null);
+        } else <span class="cstat-no" title="statement not covered" >if (manifest.hasOwnProperty('collectionUri')) {</span>
+<span class="cstat-no" title="statement not covered" >          jQuery.getJSON(manifest.collectionUri).done(<span class="fstat-no" title="function not covered" >function (data, status, jqXHR) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (data.hasOwnProperty('manifests')){</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.each(data.manifests, <span class="fstat-no" title="function not covered" >function (ci, mfst) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.addManifestFromUrl(mfst['@id'], '', null);</span>
+              });
+            } else <span class="cstat-no" title="statement not covered" >if (data.hasOwnProperty('members')){</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.each(data.members, <span class="fstat-no" title="function not covered" >function (ci, mfst) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.addManifestFromUrl(mfst['@id'], '', null);</span>
+              });
+            }
+          }).fail(<span class="fstat-no" title="function not covered" >function(jqXHR, status, error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log(jqXHR, status, error);</span>
+          });
+        }
+      });
+    },
+&nbsp;
+    hasWidgets: <span class="fstat-no" title="function not covered" >function(collection) {</span>
+<span class="cstat-no" title="statement not covered" >      return (</span>
+        typeof collection.widgets !== 'undefined' &amp;&amp;
+        collection.widgets &amp;&amp;
+        !jQuery.isEmptyObject(collection.widgets) &amp;&amp;
+        collection.widgets.length &gt; 0
+      );
+    },
+&nbsp;
+    addManifestFromUrl: function(url, location, content) {
+      var _this = this,
+        manifest;
+&nbsp;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (!_this.state.getStateProperty('manifests')[url]) {
+        manifest = new $.Manifest(url, location, content);
+        _this.eventEmitter.publish('manifestQueued', manifest, location);
+        manifest.request.done(function() {
+          _this.eventEmitter.publish('manifestReceived', manifest);
+        });
+      }
+    },
+&nbsp;
+    loadManifestFromConfig: <span class="fstat-no" title="function not covered" >function(options) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+      //make a copy of options and pass that so we don't get a circular reference
+<span class="cstat-no" title="statement not covered" >      var windowConfig = jQuery.extend(true, {}, options);</span>
+      //delete this old set of options (because they will be replaced by the actions from ADD_WINDOW)
+<span class="cstat-no" title="statement not covered" >      _this.eventEmitter.publish('DELETE_FROM_CONFIG', options);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      _this.eventEmitter.publish('ADD_WINDOW', windowConfig);</span>
+    }
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

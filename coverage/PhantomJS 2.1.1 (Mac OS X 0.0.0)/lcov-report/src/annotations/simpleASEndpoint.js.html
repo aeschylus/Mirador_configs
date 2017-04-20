@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/annotations/simpleASEndpoint.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/annotations/simpleASEndpoint.js</span></h1>
+    <h2>
+        Statements: <span class="metric">12.24% <small>(6 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">16.67% <small>(3 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">12.24% <small>(6 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/annotations/</a> &#187; simpleASEndpoint.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Edited version of https://github.com/IIIF/mirador/blob/9e3c6bbb894e044d01ad51aae1b70309939de5a9/js/src/annotations/catchEndpoint.js 
+ * This module tries to store the annotation as is in a RDF store but some fiddeling is required. Fidles are:
+ * 
+ * - delete annotation fails if id has a / in it so have to send sanatised ids to mirador
+ * - mirador requires an endpoint variable in the annotation pointing to this class.
+ * 
+ * Note: this endpoint doesn't currently support authentication, just returns allow all
+ * 
+ * All Endpoints need to have at least the following:
+ * annotationsList - current list of OA Annotations
+ * dfd - Deferred Object
+ * init()
+ * search(uri)
+ * create(oaAnnotation, returnSuccess, returnError)
+ * update(oaAnnotation, returnSuccess, returnError)
+ * deleteAnnotation(annotationID, returnSuccess, returnError) (delete is a reserved word)
+ * TODO:
+ * There is a bug in that if you create an annotation and then delete it (without moving pages) then click either the write annotation button 
+ * or try to create a new annotation the deleted annotation re-appears. Changing pages fixes the issue as the annoation is delete from the annotation store
+ *
+ */
+(function($){
+&nbsp;
+  $.SimpleASEndpoint = function(options) {
+&nbsp;
+    jQuery.extend(this, {
+      token:     null,
+      // prefix:    'annotation', /**/
+      uri:      null,
+      url:		  options.url,
+      dfd:       null,
+      annotationsList: [],        //OA list for Mirador use
+      idMapper: {} // internal list for module use to map id to URI
+    }, options);
+&nbsp;
+    this.init();
+  };
+&nbsp;
+  $.SimpleASEndpoint.prototype = {
+    //Any set up for this endpoint, and triggers a search of the URI passed to object
+    init: function() {
+      this.catchOptions = {
+        user: {
+          id: this.userid, 
+          name: this.username
+        },
+        permissions: {
+          'read':   [],
+          'update': [this.userid],
+          'delete': [this.userid],
+          'admin':  [this.userid]
+        }
+      };
+    },
+&nbsp;
+    //Search endpoint for all annotations with a given URI
+    search: <span class="fstat-no" title="function not covered" >function(options, successCallback, errorCallback) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.annotationsList = []; </span>//clear out current list
+<span class="cstat-no" title="statement not covered" >      jQuery.ajax({</span>
+        url: _this.url + "/search", // this.prefix+
+        cache: false,
+        type: 'GET',
+        dataType: 'json',
+        headers: {
+          //"x-annotator-auth-token": this.token
+        },
+        data: {
+          uri: options.uri,
+          APIKey: _this.APIKey,
+          media: "image",
+          limit: 10000
+        },
+&nbsp;
+        contentType: "application/json; charset=utf-8",
+        success: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >          if (typeof successCallback === "function") {</span>
+<span class="cstat-no" title="statement not covered" >            successCallback(data);</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            _this.annotationsList = data; </span>// gmr
+<span class="cstat-no" title="statement not covered" >            jQuery.each(_this.annotationsList, <span class="fstat-no" title="function not covered" >function(index, value) {</span></span>
+<span class="cstat-no" title="statement not covered" >              value.fullId = value["@id"];</span>
+<span class="cstat-no" title="statement not covered" >              value["@id"] = $.genUUID();</span>
+<span class="cstat-no" title="statement not covered" >              _this.idMapper[value["@id"]] = value.fullId;</span>
+<span class="cstat-no" title="statement not covered" >              value.endpoint = _this;</span>
+            });
+<span class="cstat-no" title="statement not covered" >            _this.dfd.resolve(false);</span>
+          }
+        },
+        error: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >          if (typeof errorCallback === "function") {</span>
+<span class="cstat-no" title="statement not covered" >            errorCallback();</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            console.log("The request for annotations has caused an error for endpoint: "+ options.uri);</span>
+          }
+        }
+&nbsp;
+      });
+    },
+&nbsp;
+    deleteAnnotation: <span class="fstat-no" title="function not covered" >function(annotationID, returnSuccess, returnError) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >      jQuery.ajax({</span>
+        url: _this.url + "/destroy?uri=" + encodeURIComponent(_this.idMapper[annotationID]) + "&amp;APIKey=" + _this.APIKey, // this.prefix+
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+          //"x-annotator-auth-token": this.token
+        },
+        data: {
+          uri: annotationID,
+        },
+        contentType: "application/json; charset=utf-8",
+        success: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >          returnSuccess();</span>
+        },
+        error: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >          returnError();</span>
+        }
+&nbsp;
+      });
+    },
+&nbsp;
+    update: <span class="fstat-no" title="function not covered" >function(oaAnnotation, returnSuccess, returnError) {</span>
+<span class="cstat-no" title="statement not covered" >      var annotation = oaAnnotation,</span>
+          _this = this;
+      // slashes don't work in JQuery.find which is used for delete
+      // so need to switch http:// id to full id and back again for delete.
+<span class="cstat-no" title="statement not covered" >      shortId = annotation["@id"];</span>
+<span class="cstat-no" title="statement not covered" >      annotation["@id"] = annotation.fullId;</span>
+<span class="cstat-no" title="statement not covered" >      annotationID = annotation.fullId;/</span>/annotation["@id"];
+<span class="cstat-no" title="statement not covered" >      delete annotation.fullId;</span>
+<span class="cstat-no" title="statement not covered" >      delete annotation.endpoint;</span>
+<span class="cstat-no" title="statement not covered" >      jQuery.ajax({</span>
+        url: _this.url + "/update/"+encodeURIComponent(annotationID) + "?APIKey=" + _this.APIKey, //this.prefix+
+        type: 'POST',
+        dataType: 'json',
+        headers: {
+          //"x-annotator-auth-token": this.token
+        },
+        data: JSON.stringify(annotation),
+        contentType: "application/json; charset=utf-8",
+        success: <span class="fstat-no" title="function not covered" >function(data) {</span>
+          /* this returned data doesn't seem to be used anywhere */
+<span class="cstat-no" title="statement not covered" >          returnSuccess();</span>
+        },
+        error: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >          returnError();</span>
+        }
+      });
+      // this is what updates the viewer
+<span class="cstat-no" title="statement not covered" >      annotation.endpoint = _this;</span>
+<span class="cstat-no" title="statement not covered" >      annotation.fullId = annotation["@id"];</span>
+<span class="cstat-no" title="statement not covered" >      annotation["@id"] = shortId;</span>
+    },
+&nbsp;
+    create: <span class="fstat-no" title="function not covered" >function(oaAnnotation, returnSuccess, returnError) {</span>
+<span class="cstat-no" title="statement not covered" >      var annotation = oaAnnotation,</span>
+          _this = this;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      jQuery.ajax({</span>
+        url: _this.url + "/create?APIKey=" + _this.APIKey, //this.prefix+
+        type: 'POST',
+        dataType: 'json',
+        headers: {
+          //"x-annotator-auth-token": this.token
+        },
+        data: JSON.stringify(annotation),
+        contentType: "application/json; charset=utf-8",
+        success: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >          data.fullId = data["@id"];</span>
+<span class="cstat-no" title="statement not covered" >          data["@id"] = $.genUUID();</span>
+<span class="cstat-no" title="statement not covered" >          data.endpoint = _this;</span>
+<span class="cstat-no" title="statement not covered" >          _this.idMapper[data["@id"]] = data.fullId;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          returnSuccess(data);</span>
+        },
+        error: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >          returnError();</span>
+        }
+      });
+    },
+&nbsp;
+    set: <span class="fstat-no" title="function not covered" >function(prop, value, options) {</span>
+<span class="cstat-no" title="statement not covered" >      if (options) {</span>
+<span class="cstat-no" title="statement not covered" >        this[options.parent][prop] = value;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this[prop] = value;</span>
+      }
+    },
+    userAuthorize: <span class="fstat-no" title="function not covered" >function(action, annotation) {</span>
+<span class="cstat-no" title="statement not covered" >      return true; </span>// allow all
+    }
+  };
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

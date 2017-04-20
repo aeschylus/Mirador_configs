@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/manifests/manifest.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/manifests/manifest.js</span></h1>
+    <h2>
+        Statements: <span class="metric">87.8% <small>(72 / 82)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">75% <small>(36 / 48)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">89.47% <small>(17 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">87.8% <small>(72 / 82)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/manifests/</a> &#187; manifest.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">151</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">106</span>
+<span class="cline-any cline-yes">106</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77</span>
+<span class="cline-any cline-yes">77</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($){
+&nbsp;
+  $.Manifest = function(manifestUri, location, manifestContent) {
+    if (manifestContent) {
+      jQuery.extend(true, this, {
+        jsonLd: null,
+        location: location,
+        uri: manifestUri,
+        request: null
+      });
+      this.initFromManifestContent(manifestContent);
+    } else if (manifestUri.indexOf('info.json') !== -1) {
+      // The following is an ugly hack. We need to finish the
+      // Manifesto utility library.
+      // See: https://github.com/IIIF/manifesto
+      //
+      // If manifestUri is not a string, then
+      // it's an object, namely a light-weight
+      // dummy manifest wrapped around the
+      // contents of an an info.json response.
+      //
+      // The wrapper is still going to need these
+      // accessor methods. We can just set the
+      // jsonLd directly, and the request needs to
+      // be a jQuery deferred object that is completed
+      // immediately upon creation. This allows
+      // components listening for this request to finish
+      // to react immediately without having to be
+      // re-written.
+      jQuery.extend(true, this, {
+        jsonLd: null,
+        location: location,
+        uri: manifestUri,
+        request: null,
+      });
+&nbsp;
+      this.initFromInfoJson(manifestUri);
+    } else {
+      jQuery.extend(true, this, {
+        jsonLd: null,
+        location: location,
+        uri: manifestUri,
+        request: null
+      });
+&nbsp;
+      this.init(manifestUri);
+    }
+  };
+&nbsp;
+  $.Manifest.prototype = {
+    init: function(manifestUri) {
+      var _this = this;
+      this.request = jQuery.ajax({
+        url: manifestUri,
+        dataType: 'json',
+        async: true
+      });
+&nbsp;
+      this.request.done(function(jsonLd) {
+        _this.jsonLd = jsonLd;
+      });
+    },
+    buildCanvasMap: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >      this.canvasMap = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.getCanvases()) {</span>
+<span class="cstat-no" title="statement not covered" >        this.getCanvases().forEach(<span class="fstat-no" title="function not covered" >function(canvas) {</span></span>
+<span class="cstat-no" title="statement not covered" >          _this.canvasMap[canvas['@id']] = canvas;</span>
+        });
+      }
+    },
+    initFromInfoJson: function(infoJsonUrl) {
+      var _this = this;
+      this.request = jQuery.ajax({
+        url: infoJsonUrl,
+        dataType: 'json',
+        async: true
+      });
+      this.request.done(function(jsonLd) {
+        _this.jsonLd = _this.generateInfoWrapper(jsonLd);
+      });
+    },
+    initFromManifestContent: function (manifestContent) {
+      var _this = this;
+      this.request = jQuery.Deferred();
+      this.request.done(function(jsonLd) {
+        _this.jsonLd = jsonLd;
+      });
+      _this.request.resolve(manifestContent); // resolve immediately
+    },
+    getThumbnailForCanvas : function(canvas, width) {
+      var version = "1.1",
+      compliance = -1,
+      service,
+      thumbnailUrl;
+&nbsp;
+      // Ensure width is an integer...
+      width = parseInt(width, 10);
+&nbsp;
+      // Respecting the Model...
+      if (canvas.hasOwnProperty('thumbnail')) {
+        // use the thumbnail image, prefer via a service
+        if (typeof(canvas.thumbnail) == 'string') {
+          thumbnailUrl = canvas.thumbnail;
+        } else if (canvas.thumbnail.hasOwnProperty('service')) {
+            service = canvas.thumbnail.service;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(service.hasOwnProperty('profile')) {
+               compliance = $.Iiif.getComplianceLevelFromProfile(service.profile);
+            }
+            if(compliance === 0){
+                // don't change existing behaviour unless compliance is explicitly 0
+                thumbnailUrl = canvas.thumbnail['@id'];
+            } else {
+                // Get the IIIF Image API via the @context
+                if (service.hasOwnProperty('@context')) {
+                    version = $.Iiif.getVersionFromContext(service['@context']);
+                }
+                thumbnailUrl = $.Iiif.makeUriWithWidth(service['@id'], width, version);
+            }
+        } else {
+          thumbnailUrl = canvas.thumbnail['@id'];
+        }
+      } else {
+        // No thumbnail, use main image
+        var resource = canvas.images[0].resource;
+        service = resource['default'] ? resource['default'].service : resource.service;
+        if (service.hasOwnProperty('@context')) {
+          version = $.Iiif.getVersionFromContext(service['@context']);
+        }
+        thumbnailUrl = $.Iiif.makeUriWithWidth(service['@id'], width, version);
+      }
+      return thumbnailUrl;
+    },
+    getVersion: function() {
+      var versionMap = {
+        'http://www.shared-canvas.org/ns/context.json': '1', // is this valid?
+        'http://iiif.io/api/presentation/1/context.json': '1',
+        'http://iiif.io/api/presentation/2/context.json': '2',
+        'http://iiif.io/api/presentation/2.1/context.json': '2.1'
+      };
+      return versionMap[this.jsonLd['@context']];
+    },
+    getCanvases : function() {
+      var _this = this;
+      return _this.jsonLd.sequences &amp;&amp; _this.jsonLd.sequences[0].canvases;
+    },
+    getAnnotationsListUrls: function(canvasId) {
+      var _this = this;
+      var canvas = jQuery.grep(_this.getCanvases(), function(canvas, index) {
+        return canvas['@id'] === canvasId;
+      })[0],
+      annotationsListUrls = [];
+&nbsp;
+      if (canvas &amp;&amp; canvas.otherContent) {
+        for (var i = 0; i &lt; canvas.otherContent.length; i++) {
+          annotationsListUrls.push(canvas.otherContent[i]['@id']);
+        }
+      }
+      return annotationsListUrls;
+    },
+    getStructures: function() {
+      var _this = this;
+      return _this.jsonLd.structures;
+    },
+    generateInfoWrapper: function(infoJson) {
+      // Takes in info.json and creates the
+      // dummy manifest wrapper around it
+      // that will allow it to behave like a
+     // manifest with one canvas in it, with
+      // one image on it. Some of the metadata
+      // of the image will be used as the
+      // label, and so on, of the manifest.
+      var dummyManifest = {
+        '@context': "http://www.shared-canvas.org/ns/context.json",
+        '@id': infoJson['@id'],
+        '@type': 'sc:Manifest',
+        label: infoJson['@id'].split('/')[infoJson['@id'].split('/').length -1],
+        sequences: [
+          {
+            '@id': infoJson['@id'] + '/sequence/1',
+            '@type': 'sc:Sequence',
+            canvases: [
+              {
+                '@id': infoJson['@id'] + '/sequence/1/canvas/1',
+                '@type': 'sc:Canvas',
+                width: infoJson.width,
+                height: infoJson.height,
+                images: [
+                  {
+                    '@id': infoJson['@id'] + '/sequence/1/canvas/1/image/1',
+                    '@type': 'sc:image',
+                    'motivation': 'sc:painting',
+                    resource: {
+                      '@id': infoJson,
+                      '@type': "dctypes:Image",
+                      format: "image/jpeg",
+                      height: infoJson.height,
+                      width: infoJson.width,
+                      service: {
+                        '@id': infoJson['@id'],
+                        '@context': infoJson['@context'],
+                        'profile': infoJson.profile
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+&nbsp;
+      return dummyManifest;
+    },
+    getSearchWithinService: function(){
+      var _this = this;
+      var serviceProperty = _this.jsonLd.service;
+      var service = [];
+      if (serviceProperty === undefined){
+        service = null;
+      }
+      else <span class="missing-if-branch" title="else path not taken" >E</span>if (serviceProperty.constructor === Array){
+        for (var i = 0; i &lt; serviceProperty.length; i++){
+          //TODO: should we be filtering search by context
+          if (serviceProperty[i]["@context"] === "http://iiif.io/api/search/0/context.json" ||
+            serviceProperty[i]["@context"] === "http://iiif.io/api/search/1/context.json") {
+            //returns the first service object with the correct context
+            service.push(serviceProperty[i]);
+          }
+        }
+      }
+      else <span class="cstat-no" title="statement not covered" >if (_this.jsonLd.service["@context"] === "http://iiif.io/api/search/0/context.json" ||</span>
+        serviceProperty["@context"] === "http://iiif.io/api/search/1/context.json"){
+<span class="cstat-no" title="statement not covered" >        service.push(_this.jsonLd.service);</span>
+      }
+      else {
+        //no service object with the right context is found
+<span class="cstat-no" title="statement not covered" >        service = null;</span>
+      }
+      return service;
+    },
+&nbsp;
+    /**
+     * Get the label of the a canvas by ID
+     * @param  {[type]} canvasId ID of desired canvas
+     * @return {[type]}          string
+     */
+    getCanvasLabel: function(canvasId) {
+      console.assert(canvasId &amp;&amp; canvasId !== '', "No canvasId was specified.");
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.canvasMap &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >canvasId.indexOf('#') &gt;= 0)</span> {
+<span class="cstat-no" title="statement not covered" >        var canvas = this.canvasMap[canvasId.split('#')[0]];</span>
+<span class="cstat-no" title="statement not covered" >        return canvas ? canvas.label : undefined;</span>
+      }
+    }
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 15:28:55 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
